@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Karaoke</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="skin-red sidebar-mini">
+<!--para que se muestre la pagina en donde estas -->
+<%
+  @crumbs = request.env["REQUEST_URI"]
+  @crumb=@crumbs.split('/')
+%>
+
+<div class="wrapper">
+  <!--<clase header="para el header principal">-->
+  <%= render :partial => "layouts/recursos/header" %>
+
+  <!-- para la columna de la izquierda -->
+  <%= render :partial => "layouts/recursos/left_colum" %>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Panel de Control</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Inicio</a></li>
+
+        <li class="active" id='urlsistema'></li>
+      </ol>
+    </section>
+
+    <!-- inicio contenido dinamico-->
+    <section class="content">
+
+      <%= yield %>
+
+    </section><!-- fin contenido dinamico -->
+
+  </div><!-- /.content-wrapper -->
+
+  <!--<para el footer>-->
+  <%= render :partial => "layouts/recursos/footer" %>
+
+  <div class="control-sidebar-bg"></div>
+</div><!-- ./wrapper -->
+
+
+</body>
+
+</html>
