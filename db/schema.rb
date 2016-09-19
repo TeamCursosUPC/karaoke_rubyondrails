@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918045829) do
+ActiveRecord::Schema.define(version: 20160918235315) do
 
   create_table "products", force: :cascade do |t|
     t.string   "nombre"
@@ -19,6 +19,39 @@ ActiveRecord::Schema.define(version: 20160918045829) do
     t.string   "disponibilidad", limit: 1
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "salas", force: :cascade do |t|
+    t.string   "Local"
+    t.string   "Nombre_Sala"
+    t.integer  "Capacidad"
+    t.string   "Descripcion"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "Nombre"
+    t.string   "Apellido_Paterno"
+    t.string   "Apellido_Materno"
+    t.string   "Correo"
+    t.string   "Password"
+    t.integer  "DNI"
+    t.integer  "Telefono"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.string   "Nombre"
+    t.string   "Apellido_Paterno"
+    t.string   "Apellido_Materno"
+    t.string   "Correo"
+    t.string   "Password"
+    t.integer  "DNI"
+    t.integer  "Telefono"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end
