@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :local_id %>
-    <%= f.text_field :local_id %>
+    <%= f.collection_select :local_id, Local.all, :id, :nombre %>
   </div>
 
   <div class="actions">

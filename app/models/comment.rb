@@ -1,16 +1,16 @@
 # == Schema Information
 #
-# Table name: rooms
+# Table name: comments
 #
 #  id          :integer          not null, primary key
-#  nombre      :string
-#  capacidad   :integer
+#  room_id     :integer
+#  usuario     :string
 #  descripcion :text
-#  local_id    :integer
+#  valoracion  :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
-class Room < ApplicationRecord
-  belongs_to :local
+class Comment < ApplicationRecord
+  belongs_to :room
 end
