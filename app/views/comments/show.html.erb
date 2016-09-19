@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Room:</strong>
-  <%= @comment.room %>
+  <strong>Sala:</strong>
+  <%= @comment.room.nombre %>
 </p>
 
 <p>
@@ -11,14 +11,14 @@
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
+  <strong>Descripción:</strong>
   <%= @comment.descripcion %>
 </p>
 
 <p>
-  <strong>Valoracion:</strong>
+  <strong>Valoración:</strong>
   <%= @comment.valoracion %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Editar', edit_comment_path(@comment) %> |
+<%= link_to 'Regresar', comments_path %>

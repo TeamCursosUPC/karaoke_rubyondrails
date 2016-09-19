@@ -13,4 +13,8 @@
 
 class Comment < ApplicationRecord
   belongs_to :room
+    #Validaciones de Presencia
+	validates :room_id , presence: { message: " Selecionar Sala"}
+	validates :usuario , presence: { message: " Selecionar usuario"}
+	validates :valoracion , presence: { message: " Selecionar Valoracion"}
 end

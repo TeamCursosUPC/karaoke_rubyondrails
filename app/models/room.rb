@@ -13,4 +13,9 @@
 
 class Room < ApplicationRecord
   belongs_to :local
+  	#Validaciones de Presencia
+	validates :nombre , presence: true , confirmation: true
+	validates :capacidad , presence: true , confirmation: true
+	validates :local_id , presence: true , confirmation: true
+
 end

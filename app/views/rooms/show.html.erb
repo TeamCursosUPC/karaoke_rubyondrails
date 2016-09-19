@@ -11,14 +11,14 @@
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
+  <strong>Descripción:</strong>
   <%= @room.descripcion %>
 </p>
 
 <p>
   <strong>Local:</strong>
-  <%= @room.local %>
+  <%= @room.local.nombre %>
 </p>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<%= link_to 'Editar', edit_room_path(@room) %> |
+<%= link_to 'Regresar', rooms_path %>
