@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918045829) do
+ActiveRecord::Schema.define(version: 20160919053301) do
+
+  create_table "locals", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "direccion"
+    t.integer  "telefono"
+    t.string   "mail"
+    t.text     "descripcion"
+    t.string   "administrador"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "nombre"
@@ -19,6 +30,16 @@ ActiveRecord::Schema.define(version: 20160918045829) do
     t.string   "disponibilidad", limit: 1
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string   "nombre"
+    t.integer  "capacidad"
+    t.text     "descripcion"
+    t.integer  "local_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["local_id"], name: "index_rooms_on_local_id"
   end
 
 end

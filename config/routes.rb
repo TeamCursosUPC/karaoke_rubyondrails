@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :rooms
+  resources :locals
   resources :products
   get '/', to: 'home#index', as: 'home'
 
