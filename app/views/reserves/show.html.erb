@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @reserf.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Hora inicio:</strong>
+  <%= @reserf.hora_inicio.strftime("%H:%M:%S") %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @reserf.descripcion %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reserf.user.nombre %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @reserf.room.nombre %>
+</p>
+
+<%= link_to 'Editar', edit_reserf_path(@reserf) %> |
+<%= link_to 'Atras', reserves_path %>
