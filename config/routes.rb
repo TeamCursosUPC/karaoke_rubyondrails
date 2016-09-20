@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :songs
   resources :products
   get '/', to: 'home#index', as: 'home'
 
