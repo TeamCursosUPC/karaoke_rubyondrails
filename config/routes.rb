@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :salas
+  resources :events
   resources :users
   resources :products
   get '/', to: 'home#index', as: 'home'
