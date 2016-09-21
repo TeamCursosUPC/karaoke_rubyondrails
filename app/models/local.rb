@@ -2,7 +2,6 @@
 #
 # Table name: locals
 #
-<<<<<<< HEAD
 #  id            :integer          not null, primary key
 #  nombre        :string
 #  direccion     :string
@@ -27,19 +26,5 @@ class Local < ApplicationRecord
  	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
  	validates :mail, format: { :with => VALID_EMAIL_REGEX , message: "El formato del correo es invalido" }
  	validates :mail, uniqueness: {case_sensitive: false ,message: "ya esta registrado"}
-=======
-#  id          :integer          not null, primary key
-#  nombre      :string
-#  direccion   :string
-#  telefono    :string
-#  email       :string
-#  descripcion :string
-#  user_id     :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#
 
-class Local < ApplicationRecord
-  belongs_to :user
->>>>>>> Dev_Mayron
 end
