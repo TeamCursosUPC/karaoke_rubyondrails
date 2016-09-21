@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Alfredo - para usar annotate
 gem 'annotate', '~> 2.7', '>= 2.7.1'
+gem 'bootstrap_form'

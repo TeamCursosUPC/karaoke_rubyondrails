@@ -18,4 +18,5 @@
  *= require AdminLTE/AdminLTE
  *= require AdminLTE/skins/skin-red
  *= require AdminLTE/skins/skin-green
+ *= require rails_bootstrap_forms
  */

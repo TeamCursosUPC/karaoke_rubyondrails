@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20160920174520) do
     t.index ["room_id"], name: "index_comments_on_room_id"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string   "Nombre_de_evento"
+    t.datetime "Fecha_y_hora"
+    t.integer  "Capacidad_maxima"
+    t.string   "Descripcion"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "locals", force: :cascade do |t|
     t.string   "nombre"
     t.string   "direccion"
