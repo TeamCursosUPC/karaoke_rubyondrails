@@ -26,4 +26,5 @@ class Local < ApplicationRecord
  	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
  	validates :mail, format: { :with => VALID_EMAIL_REGEX , message: "El formato del correo es invalido" }
  	validates :mail, uniqueness: {case_sensitive: false ,message: "ya esta registrado"}
+
 end

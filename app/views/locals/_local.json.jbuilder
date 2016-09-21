@@ -1,2 +1,1 @@
 json.extract! local, :id, :nombre, :direccion, :telefono, :mail, :descripcion, :administrador, :created_at, :updated_at
-json.url local_url(local, format: :json)

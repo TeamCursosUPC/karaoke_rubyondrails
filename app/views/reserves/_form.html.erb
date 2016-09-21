@@ -1,0 +1,42 @@
+<%= form_for(reserf) do |f| %>
+  <% if reserf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reserf.errors.count, "error") %> prohibited this reserf from being saved:</h2>
+
+      <ul>
+      <% reserf.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha_inicio %>
+    <%= f.date_select :fecha_inicio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hora_inicio %>
+    <%= f.time_select :hora_inicio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descripcion %>
+    <%= f.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, User.all, :id, :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :room_id %>
+    <%= f.collection_select :room_id, Room.all, :id, :nombre %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
