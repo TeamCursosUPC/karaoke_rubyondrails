@@ -1,0 +1,67 @@
+  <div class="box box-primary">
+    <div class="box-header">
+      <h3 class="box-title">Locales</h3>
+      <div class="pull-right">
+          <%= link_to(new_local_path) do %>
+              <p data-placement="top" data-toggle="tooltip" title="New">
+                <button class="btn btn-sm btn-primary btn-create" data-title="New" data-toggle="modal">
+                  <span class="glyphicon glyphicon-plus"></span> Nuevo Local
+                </button>
+              </p>
+          <% end %>
+          <span id="notice" class="alert"><%= notice %></span>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body table-responsive no-padding">
+
+      <table class="table table-hover table-bordered">
+        <thead>
+          <tr >
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Mail</th>
+            <th>Descripcion</th>
+            <th>Administrador</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @locals.each do |local| %>
+            <tr>
+              <td><%= local.id %></td>
+              <td><%= local.nombre %></td>
+              <td><%= local.direccion %></td>
+              <td><%= local.telefono %></td>
+              <td><%= local.mail %></td>
+              <td><%= local.descripcion %></td>
+              <td><%= local.administrador %></td>
+              <td align="center">
+                <%= link_to(edit_local_path(local)) do %>
+                    <p data-placement="top" data-toggle="tooltip" title="Edit">
+                      <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" >
+                        <span class="glyphicon glyphicon-pencil"></span>
+                      </button>
+                    </p>
+                <% end %>
+              </td>
+              <td align="center">
+                <%= link_to(local, method: :delete ) do %>
+                    <p data-placement="top" data-toggle="tooltip" title="Delete" >
+                      <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" >
+                        <span class="glyphicon glyphicon-trash"></span>
+                      </button>
+                    </p>
+                <% end %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    <!-- /.box-body -->
+  </div>
