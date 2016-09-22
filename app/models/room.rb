@@ -5,11 +5,12 @@
 #  id          :integer          not null, primary key
 #  nombre      :string
 #  capacidad   :integer
-#  descripcion :string
+#  descripcion :text
 #  local_id    :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
+
 
 class Room < ApplicationRecord
   belongs_to :local

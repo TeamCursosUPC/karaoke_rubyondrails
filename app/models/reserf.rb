@@ -12,6 +12,7 @@
 #  updated_at   :datetime         not null
 #
 
+
 class Reserf < ApplicationRecord
   belongs_to :user
   belongs_to :room

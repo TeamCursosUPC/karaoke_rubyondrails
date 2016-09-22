@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160920174520) do
+ActiveRecord::Schema.define(version: 20160922010903) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "room_id"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20160920174520) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["room_id"], name: "index_comments_on_room_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "Nombre_de_evento"
+    t.datetime "Fecha_y_hora"
+    t.integer  "Capacidad_maxima"
+    t.string   "Descripcion"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "locals", force: :cascade do |t|
@@ -40,6 +49,13 @@ ActiveRecord::Schema.define(version: 20160920174520) do
     t.string   "disponibilidad", limit: 1
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "reserves", force: :cascade do |t|
@@ -72,13 +88,13 @@ ActiveRecord::Schema.define(version: 20160920174520) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "clave"
-    t.string   "correo"
-    t.string   "apellido_parteno"
-    t.string   "apellido_materno"
-    t.string   "nro_documento"
-    t.string   "telefono"
+    t.string   "Nombre"
+    t.string   "Apellido_Paterno"
+    t.string   "Apellido_Materno"
+    t.string   "Correo"
+    t.string   "Password"
+    t.integer  "DNI"
+    t.integer  "Telefono"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
