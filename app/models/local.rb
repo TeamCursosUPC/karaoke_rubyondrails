@@ -13,6 +13,7 @@
 #  updated_at    :datetime         not null
 #
 
+
 class Local < ApplicationRecord
 	#Validaciones de Presencia
 	validates :mail , presence: true , confirmation: true

@@ -1,13 +1,13 @@
 # == Schema Information
 #
-# Table name: songs
+# Table name: requests
 #
 #  id         :integer          not null, primary key
-#  atista     :string
-#  nombre     :string
+#  user_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Song < ApplicationRecord
+class Request < ApplicationRecord
+  belongs_to :user
 end

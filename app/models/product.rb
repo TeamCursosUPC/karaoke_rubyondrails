@@ -11,6 +11,7 @@
 #  updated_at     :datetime         not null
 #
 
+
 class Product < ApplicationRecord
   # Confirmamos el email y validamos que no sean vacios con presence
   # mostramos el mensaje de error con message

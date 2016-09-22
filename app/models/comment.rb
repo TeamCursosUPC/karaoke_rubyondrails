@@ -11,6 +11,7 @@
 #  updated_at  :datetime         not null
 #
 
+
 class Comment < ApplicationRecord
   belongs_to :room
     #Validaciones de Presencia
