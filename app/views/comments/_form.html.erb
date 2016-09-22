@@ -10,23 +10,10 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="field">
     <%= f.collection_select :room_id, Room.all, :id, :nombre, label: "Sala:" %>
-  </div>
-
-  <div class="field">
     <%= f.text_field :usuario , label: "Usuario:"%>
-  </div>
-
-  <div class="field">
     <%= f.text_field :descripcion, label: "Descripción:" %>
-  </div>
-
-  <div class="field">
     <%= f.select :valoracion, [['Muy Malo', 1], ['Malo', 2], ['Regular', 3], ['Bueno', 4], ['Muy Bueno', 5]], label: "Valorar:" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Guardar Cambios", class: "btn btn-success" %>
-  </div>
+    <%= f.submit "Crear Comentario", class: "btn btn-success" %>
 <% end %>
