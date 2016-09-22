@@ -13,6 +13,7 @@
 #  updated_at    :datetime         not null
 #
 
+
 class Local < ApplicationRecord
 	has_many :room
 

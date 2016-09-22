@@ -12,11 +12,15 @@
  *
  *= require_tree .
  *= require_self
- *= require bootstrap
- *= require font-awesome
- *= require ionicons
+
  *= require AdminLTE/AdminLTE
  *= require AdminLTE/skins/skin-red
  *= require AdminLTE/skins/skin-green
+ *= require dataTables/jquery.dataTables
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+ *= require dataTables/extras/dataTables.responsive
+ *= require bootstrap
  *= require rails_bootstrap_forms
+ *= require font-awesome
+ *= require ionicons
  */
