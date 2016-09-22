@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id               :integer          not null, primary key
+#  Nombre_de_evento :string
+#  Fecha_y_hora     :datetime
+#  Capacidad_maxima :integer
+#  Descripcion      :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
 class Event < ApplicationRecord
     #Validamos los datos del evento que se agregue
     # mostramos el mensaje de error con message

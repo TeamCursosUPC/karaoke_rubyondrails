@@ -3,16 +3,17 @@
 # Table name: users
 #
 #  id               :integer          not null, primary key
-#  nombre           :string
-#  clave            :string
-#  correo           :string
-#  apellido_parteno :string
-#  apellido_materno :string
-#  nro_documento    :string
-#  telefono         :string
+#  Nombre           :string
+#  Apellido_Paterno :string
+#  Apellido_Materno :string
+#  Correo           :string
+#  Password         :string
+#  DNI              :integer
+#  Telefono         :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
+
 class User < ApplicationRecord
   #Validamos los datos del usuario que se agregue
   # mostramos el mensaje de error con message
