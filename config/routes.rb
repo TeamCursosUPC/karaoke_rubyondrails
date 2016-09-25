@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :requests
   resources :comments
   resources :rooms
@@ -6,8 +7,7 @@ Rails.application.routes.draw do
   resources :songs
   resources :reserves
   resources :events
-  resources :users
   resources :products
   get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
-  get '/', to: 'home#index', as: 'home'
+  root to: 'home#index', as: 'home'
 end

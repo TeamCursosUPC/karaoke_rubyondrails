@@ -7,6 +7,8 @@ gem "font-awesome-rails"
 gem 'ionicons-rails'
 gem 'bootstrap_form'
 gem 'jquery-datatables-rails', '~> 3.4.0'
+gem 'devise'
+gem "pundit"
 
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

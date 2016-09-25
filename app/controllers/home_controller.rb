@@ -1,4 +1,4 @@
 class HomeController < ApplicationController
-  def index
-  end
+  layout 'admin_lte_2'
+
 end
