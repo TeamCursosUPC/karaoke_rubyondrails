@@ -87,16 +87,4 @@ ActiveRecord::Schema.define(version: 20160922010903) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "Nombre"
-    t.string   "Apellido_Paterno"
-    t.string   "Apellido_Materno"
-    t.string   "Correo"
-    t.string   "Password"
-    t.integer  "DNI"
-    t.integer  "Telefono"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
-
 end

@@ -1,7 +1,7 @@
-<%= form_for(room) do |f| %>
+<%= bootstrap_form_for(@room) do |f| %>
   <% if room.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
+      <h2><%= pluralize(room.errors.count, "Campo con informacion incorrecta") %> prohibited this room from being saved:</h2>
 
       <ul>
       <% room.errors.full_messages.each do |message| %>
@@ -10,28 +10,10 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :nombre %>
-    <%= f.text_field :nombre %>
-  </div>
-
-  <div class="field">
-    <%= f.label :capacidad %>
-    <%= f.number_field :capacidad %>
-  </div>
-
-  <div class="field">
-    <%= f.label :descripcion %>
-    <%= f.text_area :descripcion %>
-  </div>
-
-  <div class="field">
-    <%= f.label :local_id %>
-    <%= f.collection_select :local_id, Local.all, :id, :nombre %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.text_field :nombre, label: "Nombre del local:" %>
+  <%= f.text_field :capacidad, label: "Direccion del local:" %>
+  <%= f.text_field :descripcion, label: "Descripcion del local:" %>
+  <%= f.collection_select :local_id, Local.all, :id, :nombre, label: "Local:" %>
+  <%= f.submit "Guardar Cambios", class: "btn btn-success" %>
+  <%= link_to 'Cancelar', locals_path, class:"btn btn-danger"  %>
 <% end %>
