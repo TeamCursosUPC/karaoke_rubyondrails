@@ -1,9 +1,8 @@
-<%= form_for(comment) do |f| %>
+<%= bootstrap_form_for(@comment, label_errors: true) do |f| %>
   <% if comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
       <ul>
+      <li><%= pluralize(comment.errors.count, "Campo mal llenado") %> no se pudo guardar:</li>
       <% comment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -11,27 +10,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :room_id %>
-    <%= f.collection_select :room_id, Room.all, :id, :nombre %>
-  </div>
-
-  <div class="field">
-    <%= f.label :usuario %>
-    <%= f.text_field :usuario %>
-  </div>
-
-  <div class="field">
-    <%= f.label :descripcion %>
-    <%= f.text_field :descripcion %>
-  </div>
-
-  <div class="field">
-    <%= f.label :valoracion %>
-    <%= f.select :valoracion, [['Sin Comentarios', 0],['Muy Malo', 1], ['Malo', 2], ['Regular', 3], ['Bueno', 4], ['Muy Bueno', 5]] %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="field">
+    <%= f.collection_select :room_id, Room.all, :id, :nombre, label: "Sala:" %>
+    <%= f.text_field :usuario , label: "Usuario:"%>
+    <%= f.text_field :descripcion, label: "Descripción:" %>
+    <%= f.select :valoracion, [['Muy Malo', 1], ['Malo', 2], ['Regular', 3], ['Bueno', 4], ['Muy Bueno', 5]], label: "Valorar:" %>
+    <%= f.submit "Crear Comentario", class: "btn btn-success" %>
 <% end %>

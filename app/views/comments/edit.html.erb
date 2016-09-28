@@ -1,6 +1,19 @@
-<h1>Editing Comment</h1>
+<h1>Editar Comentario</h1>
 
-<%= render 'form', comment: @comment %>
+<% if false %>
+	<%= render 'form', comment: @comment %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+	<%= link_to 'Show', @comment %> |
+	<%= link_to 'Back', comments_path %>
+<% end %>
+
+<%= bootstrap_form_for(@comment) do |f| %>
+  <%= f.collection_select :room_id, Room.all, :id, :nombre, label: "Sala:" %>
+  <%= f.text_field :usuario, label: "Usuario:" %>
+  <%= f.text_field :descripcion, label: "Descripción:" %>
+  <%= f.select :valoracion, [['Muy Malo', 1], ['Malo', 2], ['Regular', 3], ['Bueno', 4], ['Muy Bueno', 5]], { label: "Valorar la sala:" }, { class: "selectpicker" } %>
+  <%= f.submit "Guardar Cambios", class: "btn btn-success" %>
+<% end %>
+
+
+<h1><%= @q %></h1>
