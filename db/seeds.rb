@@ -10,6 +10,7 @@
  Product.destroy_all
  products = Product.create([
     { nombre: 'Jhonie Walker Red Laber', tipo: 'Bebida',precio: '210.00', disponibilidad: '1' },
+<<<<<<< HEAD
     { nombre: 'Jhonie Walker Red Laber', tipo: 'Bebida',precio: '210.00', disponibilidad: '1' },
     { nombre: 'Jhonie Walker Red Laber', tipo: 'Bebida',precio: '210.00', disponibilidad: '1' },
     { nombre: 'Jhonie Walker Red Laber', tipo: 'Bebida',precio: '210.00', disponibilidad: '1' },
@@ -70,3 +71,8 @@ events = Event.create([
   ])
   
   p "Created #{User.count} Users"
+=======
+    { nombre: 'Ron Cartavio', tipo: 'Bebida',precio: '95.00', disponibilidad: '1' }
+ ])
+ p "Created #{Product.count} Products"
+>>>>>>> 9452d38e1bb2f361fddcdb7b91af4d18297d674b

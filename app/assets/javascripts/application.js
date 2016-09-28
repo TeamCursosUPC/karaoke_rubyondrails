@@ -14,6 +14,7 @@
 // = require jquery_ujs
 // = require turbolinks
 // = require bootstrap
+<<<<<<< HEAD
 // = require dataTables/jquery.dataTables
 // = require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 // = require dataTables/extras/dataTables.responsive
@@ -53,3 +54,7 @@ function dataTables_lang_spanish(){
 
     return lang;
 }
+=======
+// = require app
+// = require_tree .
+>>>>>>> 9452d38e1bb2f361fddcdb7b91af4d18297d674b

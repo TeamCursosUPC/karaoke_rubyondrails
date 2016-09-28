@@ -6,7 +6,10 @@ gem 'adminlte2-rails'
 gem "font-awesome-rails"
 gem 'ionicons-rails'
 gem 'bootstrap_form'
+<<<<<<< HEAD
 gem 'jquery-datatables-rails', '~> 3.4.0'
+=======
+>>>>>>> 9452d38e1bb2f361fddcdb7b91af4d18297d674b
 
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

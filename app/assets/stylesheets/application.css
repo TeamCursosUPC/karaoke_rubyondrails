@@ -12,7 +12,14 @@
  *
  *= require_tree .
  *= require_self
+<<<<<<< HEAD
 
+=======
+ *= require bootstrap
+ *= require rails_bootstrap_forms
+ *= require font-awesome
+ *= require ionicons
+>>>>>>> 9452d38e1bb2f361fddcdb7b91af4d18297d674b
  *= require AdminLTE/AdminLTE
  *= require AdminLTE/skins/skin-red
  *= require AdminLTE/skins/skin-green
