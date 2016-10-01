@@ -1,4 +1,4 @@
-class RequestsController < ApplicationController
+class RequestsController < KaraokeController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
 
   # GET /requests

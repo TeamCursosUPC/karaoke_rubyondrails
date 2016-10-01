@@ -4,7 +4,7 @@
   <title>Karaoke</title>
   <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application_adminLTE.css', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
 </head>
 
@@ -39,7 +39,13 @@
 
     <!-- inicio contenido dinamico-->
     <section class="content">
-
+      <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+      
       <%= yield %>
 
     </section><!-- fin contenido dinamico -->

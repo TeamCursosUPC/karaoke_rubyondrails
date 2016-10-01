@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users, :path => "", :path_names => {
+      :sign_in      => 'login',
+      :sign_out     => 'logout',
+      :password     => 'secret',
+      :confirmation => 'verification',
+      :unlock       => 'unlock',
+      :registration => 'register',
+      :sign_up      => 'new' }
+
   resources :requests
   resources :comments
   resources :rooms
@@ -6,8 +15,9 @@ Rails.application.routes.draw do
   resources :songs
   resources :reserves
   resources :events
-  resources :users
   resources :products
+
+  get 'users', to: 'users#index', as: 'users'
   get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
-  get '/', to: 'home#index', as: 'home'
+  root to: 'home#index', as: 'home'
 end

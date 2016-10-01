@@ -1,4 +1,4 @@
-class ReservesController < ApplicationController
+class ReservesController < KaraokeController
   before_action :set_reserf, only: [:show, :edit, :update, :destroy]
 
   # GET /reserves

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application_login.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application_login.js', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+    <!-- inicio contenido dinamico-->
+    <section class="content">
+      <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
+      <%= yield %>
+
+
+</body>
+
+</html>

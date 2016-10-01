@@ -15,15 +15,25 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
 
-      <!-- Navbar Right Menu
+
+      <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Control Sidebar Toggle Button
+
+          <li class="dropdown user user-menu">
+
+            <%= link_to edit_user_registration_path, :class => "dropdown-toggle" do %>
+                <%= image_tag("user2-160x160.jpg", :alt => "User Image", :class => "user-image") %>
+                <span class="hidden-xs"><%= current_user.email %></span>
+            <% end %>
+
+          </li>
+          <!-- Control Sidebar Toggle Button -->
           <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+            <%= link_to '<i class="fa fa-sign-out"></i>Logout'.html_safe, destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
           </li>
         </ul>
-      </div>-->
+      </div>
 
     </nav>
   </header>

@@ -21,10 +21,6 @@
 // = require_tree .
 
 
-function hola() {
-    alert('hola')
-}
-
 function dataTables_lang_spanish(){
     var lang = {
         "sProcessing":     "Procesando...",

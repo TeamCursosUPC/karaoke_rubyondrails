@@ -1,4 +1,4 @@
-class LocalsController < ApplicationController
+class LocalsController < KaraokeController
   before_action :set_local, only: [:show, :edit, :update, :destroy]
 
   # GET /locals
