@@ -1,5 +1,13 @@
 jQuery ->
   $('#rooms').dataTable
+    dom               : 'Bfrtip'
+    buttons           : [
+      'copy'
+      'excel'
+      'csv'
+      'pdf'
+      'print'
+    ]
     deferRender       : true
     responsive        : true
     processing        : true

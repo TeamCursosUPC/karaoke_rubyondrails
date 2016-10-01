@@ -10,14 +10,17 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *
+ *= require font-awesome
+ *= require ionicons
  *= require AdminLTE/AdminLTE
  *= require AdminLTE/skins/skin-red
  *= require AdminLTE/skins/skin-green
- *= require bootstrap
- *= require rails_bootstrap_forms
- *= require dataTables/jquery.dataTables
- *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
- *= require dataTables/extras/dataTables.responsive
- *= require font-awesome
- *= require ionicons
+ *= require Bootstrap-3.3.6/css/bootstrap
+ *= require DataTables-1.10.12/css/jquery.dataTables
+ *= require DataTables-1.10.12/css/dataTables.bootstrap
+ *= require Buttons-1.2.2/css/buttons.bootstrap
+ *= require Responsive-2.1.0/css/responsive.bootstrap
+ *= require Select-1.2.0/css/select.bootstrap
+
  */
