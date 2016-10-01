@@ -1,5 +1,13 @@
 jQuery ->
   $('#locals').dataTable
+    dom               : 'Bfrtip'
+    buttons           : [
+      'copy'
+      'excel'
+      'csv'
+      'pdf'
+      'print'
+    ]
     deferRender       : true
     responsive        : true
     processing        : true
@@ -8,7 +16,7 @@ jQuery ->
     lengthMenu        : [10, 20, 30, 40, 50]
     language          : dataTables_lang_spanish()
     columnDefs: [ {
-      "targets": [0,7,8]
+      "targets": [0]
       "orderable": false
     } ]
 
