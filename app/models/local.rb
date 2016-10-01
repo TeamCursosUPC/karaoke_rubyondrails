@@ -15,13 +15,15 @@
 
 
 class Local < ApplicationRecord
+	has_many :room
+
 	#Validaciones de Presencia
 	validates :mail , presence: true , confirmation: true
 	validates :nombre , presence: true , confirmation: true
 	validates :administrador , presence: true , confirmation: true
 
 	#validaciones de tipo
-	validates :telefono, length: { in: 8..9 , message: "debe tener entre 8 y 9 caracteres"}
+	validates :telefono, length: { in: 6..9 , message: "debe tener entre 6 y 9 caracteres"}
 	validates :telefono, numericality: { only_integer: true }
 	#Alfredo - Validar en una expresion regular  email
  	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
