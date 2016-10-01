@@ -14,4 +14,7 @@
  *= require font-awesome
  *= require ionicons
  *= require login/login
+ *= require AdminLTE/AdminLTE
+ *= require AdminLTE/skins/skin-red
+ *= require AdminLTE/skins/skin-green
  */
