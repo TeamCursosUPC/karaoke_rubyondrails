@@ -1,13 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# 
-#Para reiniciar los ids en las tablas usar:
-# => DELETE FROM sqlite_sequence WHERE name = 'nombre_tabla';
 
 # Seeders Productos
  Product.destroy_all
@@ -35,6 +25,31 @@
  ])
  p "Created #{Product.count} Products"
 
+# Seeders Productos
+Song.destroy_all
+songs = Song.create([
+		{ atista: 'Nirvana', nombre: 'Smells Like Teen Spirit'},
+		{ atista: 'Led Zeppelin', nombre: 'Stairway to Heaven'},
+		{ atista: 'Guns and roses', nombre: 'Sweet Child O Mine'},
+		{ atista: 'Oasis', nombre: 'Wonderwall'},
+		{ atista: 'The Beatles', nombre: 'Hey Jude'},
+		{ atista: 'Hector Lavoe', nombre: 'El dia de mi suerte'},
+		{ atista: 'Nirvana', nombre: 'Smells Like Teen Spirit'},
+		{ atista: 'Led Zeppelin', nombre: 'Stairway to Heaven'},
+		{ atista: 'Guns and roses', nombre: 'Sweet Child O Mine'},
+		{ atista: 'Oasis', nombre: 'Wonderwall'},
+		{ atista: 'The Beatles', nombre: 'Hey Jude'},
+		{ atista: 'Hector Lavoe', nombre: 'El dia de mi suerte'},
+		{ atista: 'Nirvana', nombre: 'Smells Like Teen Spirit'},
+		{ atista: 'Led Zeppelin', nombre: 'Stairway to Heaven'},
+		{ atista: 'Guns and roses', nombre: 'Sweet Child O Mine'},
+		{ atista: 'Oasis', nombre: 'Wonderwall'},
+		{ atista: 'The Beatles', nombre: 'Hey Jude'},
+		{ atista: 'Oasis', nombre: 'Wonderwall'},
+		{ atista: 'The Beatles', nombre: 'Hey Jude'},
+		{ atista: 'Hector Lavoe', nombre: 'El dia de mi suerte'}
+])
+p "Created #{Song.count} Songs"
 
 # Seeders Locales
  Local.destroy_all
@@ -68,7 +83,7 @@
  ])
  p "Created #{Room.count} Rooms"
 
- #Seeders Comentarios
+#Seeders Comentarios
 Comment.destroy_all
 comments = Comment.create([
 	{ room_id: '8', usuario: 'San Jose Iturbide', descripcion:  'Descipcion sala 1', valoracion:  '5' },
