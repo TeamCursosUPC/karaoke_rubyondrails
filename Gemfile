@@ -11,6 +11,7 @@ gem "pundit"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-twitter"
+gem 'omniauth-google-oauth2'
 
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
