@@ -1,33 +1,15 @@
 <h1>Nueva Reserva</h1>
 
-<%= form_for(new_reserf_path) do |f| %>
+<%= bootstrap_form_for(new_reserf_path) do |f| %>
 
-    <div class="field">
-      <%= f.label :fecha_inicio %>
-      <%= f.date_select :fecha_inicio %>
-    </div>
+    <%= f.date_select :fecha_inicio, label: "Fecha de inicio:" %>
+    <%= f.time_select :hora_inicio, label: "Hora de inicio:" %>
+    <%= f.text_field :descripcion %>
+    <%= f.collection_select :user_id, User.all, :id, :email, label: "Usuario:" %>
+    <%= f.collection_select :room_id, Room.all, :id, :nombre %>
 
-    <div class="field">
-      <%= f.label :hora_inicio %>
-      <%= f.time_select :hora_inicio %>
-    </div>
+    <%= f.submit 'Guardar', :class => 'btn btn-primary'%>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                reserves_path, :class => 'btn btn-default' %>
 
-    <div class="field">
-      <%= f.label :descripcion %>
-      <%= f.text_field :descripcion %>
-    </div>
-
-    <div class="field">
-      <%= f.label :user_id %>
-      <%= f.collection_select :user_id, User.all, :id, :nombre %>
-    </div>
-
-    <div class="field">
-      <%= f.label :room_id %>
-      <%= f.collection_select :room_id, Room.all, :id, :nombre %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
 <% end %>

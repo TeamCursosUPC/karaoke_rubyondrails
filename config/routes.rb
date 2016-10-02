@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   resources :products
 
   get 'users', to: 'users#index', as: 'users'
-  get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
+  get 'newClient', to: 'reserves#newClient', as: 'reCLient'
   root to: 'home#index', as: 'home'
 end

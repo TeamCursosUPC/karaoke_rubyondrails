@@ -16,4 +16,9 @@
 class Reserf < ApplicationRecord
   belongs_to :user
   belongs_to :room
+
+  validates :fecha_inicio , presence: true , confirmation: true
+  validates :hora_inicio , presence: true , confirmation: true
+  validates :room_id , presence: true , confirmation: true
+
 end
