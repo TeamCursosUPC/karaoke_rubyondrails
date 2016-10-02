@@ -3,13 +3,14 @@ source 'https://rubygems.org'
 # Gemas instaladas
 # por el equipo de Desarrollo
 gem 'adminlte2-rails'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem "font-awesome-rails"
 gem 'ionicons-rails'
 gem 'bootstrap_form'
-gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'devise'
 gem "pundit"
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
 
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

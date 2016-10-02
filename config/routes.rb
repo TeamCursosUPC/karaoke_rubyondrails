@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :path => "", :path_names => {
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }, :path => "", :path_names => {
       :sign_in      => 'login',
       :sign_out     => 'logout',
       :password     => 'secret',
@@ -19,5 +19,7 @@ Rails.application.routes.draw do
 
   get 'users', to: 'users#index', as: 'users'
   get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
+
+
   root to: 'home#index', as: 'home'
 end
