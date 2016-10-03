@@ -66,3 +66,4 @@ gem 'bootstrap_form'
 
 gem 'less-rails', '~> 2.7', '>= 2.7.1'
 gem 'therubyracer', '~> 0.12.2'
+gem 'twitter-bootstrap-rails'

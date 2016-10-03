@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :reserves
   resources :events
   resources :products
-
+get 'pagesusers/userregistartion'
   get 'users',    to: 'users#index', as: 'users'
   get 'cliente',  to: 'pagesusers#index', as: 'cliente'
   get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
