@@ -1,11 +1,16 @@
 class PagesusersController < ApplicationController
-  layout 'internal', except: [:index]
+  layout 'internal', except: [:index, :solicitapedido]
 
   def index
-
+  
   end
-def userregistration
-end
 
+  def solicitapedido
+    @products = Product.all
+  end
+
+	def userregistration
+		
+	end
 
  end

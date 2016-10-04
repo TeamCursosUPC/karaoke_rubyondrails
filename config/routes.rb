@@ -15,14 +15,16 @@ Rails.application.routes.draw do
   resources :reserves
   resources :events
   resources :products
+ 
+
 get 'pagesusers/userregistartion'
-get 'pagesusers/solicitapedido'
-  get 'users',    to: 'users#index', as: 'users'
-  get 'cliente',  to: 'pagesusers#index', as: 'cliente'
-  get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
+get 'pagesusers/solicitapedido', to: 'pagesusers#solicitapedido', as: 'solicitapedido'
+get 'users',    to: 'users#index', as: 'users'
+get 'cliente',  to: 'pagesusers#index', as: 'cliente'
+get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
 
-  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
+match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
 
-  root to: 'home#index', as: 'home'
+root to: 'home#index', as: 'home'
 
 end
