@@ -13,7 +13,6 @@ gem "omniauth-facebook"
 gem "omniauth-twitter"
 gem 'omniauth-google-oauth2'
 
-gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -60,6 +59,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#Alfredo - para usar annotate
+#Alfredo 
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 gem 'bootstrap_form'
+
+#Martin 
+gem 'pry'
+gem 'pry-rails'
+gem 'less-rails', '~> 2.7', '>= 2.7.1'
+gem 'therubyracer', '~> 0.12.2'
+gem 'twitter-bootstrap-rails'
