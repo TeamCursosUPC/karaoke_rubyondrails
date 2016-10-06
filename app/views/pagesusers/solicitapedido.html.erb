@@ -23,19 +23,20 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                    <% @products.each do |product| %>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td>
+                              <td><%= product.id %></td>
+                              <td><%= product.nombre %></td>
+                              <td><%= product.tipo %></td>
+                              <td><%= product.precio %></td>
+                              <td><%= product.disponibilidad %></td>
+                              <td>
                                 <div class="btn">
                                     <p><a class="btn btn-primary btn-lg" href="#" role="button">Seleccionar</a></p>
                                 </div>
-                            </td>
-                            
+                              </td> 
                         </tr>
-
-      
+                    <% end %>                              
                     </tbody>
                 </table>   
         </div>
