@@ -64,8 +64,8 @@ gem 'annotate', '~> 2.7', '>= 2.7.1'
 gem 'bootstrap_form'
 
 #Martin 
-gem 'pry'
-gem 'pry-rails'
-gem 'less-rails', '~> 2.7', '>= 2.7.1'
-gem 'therubyracer', '~> 0.12.2'
-gem 'twitter-bootstrap-rails'
+#gem 'pry' #para el debug
+#gem 'pry-rails' #para el debug
+#gem 'less-rails', '~> 2.7', '>= 2.7.1'
+#gem 'therubyracer', '~> 0.12.2'
+#gem 'twitter-bootstrap-rails'
