@@ -1,5 +1,5 @@
 class PagesusersController < ApplicationController
-  layout 'internal', except: [:index, :solicitapedido]
+  layout 'internal', except: [:index, :solicitapedido, :userregistration, :solicitacancion, :reservasala]
 
   def index
   
@@ -12,5 +12,11 @@ class PagesusersController < ApplicationController
 	def userregistration
 		
 	end
+  def solicitacancion
+    @songs = Song.all
+  end 
+  def reservasala
 
- end
+  end 
+
+end
