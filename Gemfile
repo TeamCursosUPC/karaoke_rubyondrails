@@ -11,7 +11,6 @@ gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'devise'
 gem "pundit"
 
-gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -61,3 +60,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Alfredo - para usar annotate
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 gem 'bootstrap_form'
+gem 'render_404', '~> 0.0.15'
