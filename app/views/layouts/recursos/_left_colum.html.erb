@@ -21,15 +21,21 @@
           <i class="fa phone-square"></i> <span>Mantenimiento</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-          <li><a href="/locals" class="reportes"><i class="fa fa-circle-o text-red"></i> Locales</a></li>
-          <li><a href="/rooms" class="reportes"><i class="fa fa-circle-o text-red"></i> Salas</a></li>
-          <li><a href="/products" class="reportes"><i class="fa fa-circle-o text-yellow"></i> Productos</a></li>
-          <li><a href="/songs" class="reportes"><i class="fa fa-circle-o text-yellow"></i> Canciones</a></li>
-          <li><a href="/requests" class="reportes"><i class="fa fa-circle-o text-yellow"></i> Pedidos</a></li>
-          <li><a href="/reserves" class="reportes"><i class="fa fa-circle-o text-green"></i> Reservas</a></li>
-          <li><a href="/events" class="reportes"><i class="fa fa-circle-o text-green"></i> Eventos</a></li>
-          <li><a href="/comments" class="reportes"><i class="fa fa-circle-o text-green"></i> Comentarios</a></li>
-          <li><a href="/users" class="reportes"><i class="fa fa-circle-o text-blue"></i> Usuarios</a></li>
+          <% if (current_user.nombre == "admin") then %>
+            <li><a href="/locals" class="reportes"><i class="fa fa-circle-o text-red"></i> Locales</a></li>
+            <li><a href="/rooms" class="reportes"><i class="fa fa-circle-o text-red"></i> Salas</a></li>
+            <li><a href="/products" class="reportes"><i class="fa fa-circle-o text-yellow"></i> Productos</a></li>
+            <li><a href="/songs" class="reportes"><i class="fa fa-circle-o text-yellow"></i> Canciones</a></li>
+            <li><a href="/requests" class="reportes"><i class="fa fa-circle-o text-yellow"></i> Pedidos</a></li>
+            <li><a href="/reserves" class="reportes"><i class="fa fa-circle-o text-green"></i> Reservas</a></li>
+            <li><a href="/events" class="reportes"><i class="fa fa-circle-o text-green"></i> Eventos</a></li>
+            <li><a href="/comments" class="reportes"><i class="fa fa-circle-o text-green"></i> Comentarios</a></li>
+            <li><a href="/users" class="reportes"><i class="fa fa-circle-o text-blue"></i> Usuarios</a></li>
+          <% else %>
+              <li><a href="/products" class="reportes"><i class="fa fa-circle-o text-blue"></i> Productos</a></li>
+              <li><a href="/songs" class="reportes"><i class="fa fa-circle-o text-blue"></i> Canciones</a></li>
+              <li><a href="/newClient" class="reportes"><i class="fa fa-circle-o text-blue"></i> Realizar reserva</a></li>
+          <% end %>
         </ul>
       </li>
     </ul>

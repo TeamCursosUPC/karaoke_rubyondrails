@@ -18,7 +18,6 @@ Rails.application.routes.draw do
 
   get 'users', to: 'users#index', as: 'users'
   get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
-
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
 
   root to: 'home#index', as: 'home'

@@ -83,18 +83,29 @@ p "Created #{Song.count} Songs"
  ])
  p "Created #{Room.count} Rooms"
 
-#Seeders Comentarios
-Comment.destroy_all
-comments = Comment.create([
-	{ room_id: '8', usuario: 'San Jose Iturbide', descripcion:  'Descipcion sala 1', valoracion:  '5' },
-	{ room_id: '5', usuario: 'Xichu', descripcion:  'Descipcion sala 2', valoracion:  '4' },
-	{ room_id: '1', usuario: 'Victoria', descripcion:  'Descipcion sala 3', valoracion:  '3' },
-	{ room_id: '8', usuario: 'Yuriria', descripcion:  'Descipcion sala 4', valoracion:  '1' },
-	{ room_id: '9', usuario: 'Moroleon', descripcion:  'Descipcion sala 5', valoracion:  '1' },
-	{ room_id: '7', usuario: 'Salvatierra', descripcion:  'Descipcion sala 6', valoracion:  '1' },
-	{ room_id: '2', usuario: 'Apaseo el Alto', descripcion:  'Descipcion sala 7', valoracion:  '3' },
-	{ room_id: '9', usuario: 'Romita', descripcion:  'Descipcion sala 8', valoracion:  '2' },
-	{ room_id: '6', usuario: 'Jerecuaro', descripcion:  'Descipcion sala 9', valoracion:  '4' },
- ])
- p "Created #{Comment.count} Comments"
+#Seeders Reservas
+Reserf.destroy_all
+reserves = Reserf.create([
+	{ fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' }
+])
+p "Created #{Reserf.count} Reserves"
 
