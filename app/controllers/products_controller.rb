@@ -4,6 +4,7 @@ class ProductsController < KaraokeController
   # GET /products
   # GET /products.json
   def index
+    @lid = params[:lid]
     @products = Product.all
   end
 

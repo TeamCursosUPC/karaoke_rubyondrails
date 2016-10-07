@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :tipo
       t.decimal :precio
       t.string :disponibilidad, limit: 1
+      t.references :local, foreign_key: true
 
       t.timestamps
     end

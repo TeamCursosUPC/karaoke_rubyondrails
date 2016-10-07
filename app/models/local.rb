@@ -14,8 +14,11 @@
 #
 
 
+
+
 class Local < ApplicationRecord
 	has_many :room
+	has_many :product
 
 	#Validaciones de Presencia
 	validates :mail , presence: true , confirmation: true

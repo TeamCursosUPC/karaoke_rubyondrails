@@ -56,8 +56,10 @@ ActiveRecord::Schema.define(version: 20161001233312) do
     t.string   "tipo"
     t.decimal  "precio"
     t.string   "disponibilidad", limit: 1
+    t.integer  "local_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.index ["local_id"], name: "index_products_on_local_id"
   end
 
   create_table "requests", force: :cascade do |t|

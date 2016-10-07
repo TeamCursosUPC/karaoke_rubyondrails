@@ -7,12 +7,13 @@
 #  tipo           :string
 #  precio         :decimal(, )
 #  disponibilidad :string(1)
+#  local_id       :integer
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #
 
-
 class Product < ApplicationRecord
+	belongs_to :local
   # Confirmamos el email y validamos que no sean vacios con presence
   # mostramos el mensaje de error con message
   validates :nombre , confirmation: true, presence: { message: " es requerido"}

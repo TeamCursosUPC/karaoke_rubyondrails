@@ -23,6 +23,7 @@
             <th>Tipo de Producto</th>
             <th>Precio Unitario</th>
             <th>Disponibilidad</th>
+            <th>Local</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -36,6 +37,7 @@
               <td><%= product.tipo %></td>
               <td><%= product.precio %></td>
               <td><%= product.disponibilidad %></td>
+              <td><%= product.local.nombre %></td>
               <td align="center">
                 <%= link_to(edit_product_path(product)) do %>
                     <p data-placement="top" data-toggle="tooltip" title="Edit">

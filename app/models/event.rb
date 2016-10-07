@@ -11,6 +11,7 @@
 #  updated_at       :datetime         not null
 #
 
+
 class Event < ApplicationRecord
     #Validamos los datos del evento que se agregue
     # mostramos el mensaje de error con message
