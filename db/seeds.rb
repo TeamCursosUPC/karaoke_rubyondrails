@@ -98,3 +98,13 @@ comments = Comment.create([
  ])
  p "Created #{Comment.count} Comments"
 
+
+#Seeders Usuarios
+User.destroy_all
+users = User.create([
+	{ email: 'alancornejo@icloud.com', password: 'cornejo', :password_confirmation => 'cornejo', role: 'admin' },
+	{ email: 'alan_cs85@hotmail.com',  password: 'salazar', :password_confirmation => 'salazar', role: 'cliente' },
+])
+
+p "Created #{User.count} Usuarios"
+
