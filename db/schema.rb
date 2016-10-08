@@ -117,6 +117,7 @@ ActiveRecord::Schema.define(version: 20161001233312) do
     t.boolean  "genero",                 default: false
     t.integer  "numero_movil"
     t.integer  "role"
+    t.integer  "data_completed",         default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

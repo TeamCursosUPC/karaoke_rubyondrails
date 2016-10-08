@@ -4,8 +4,9 @@ class UsersController < KaraokeController
     @users = User.all
   end
 
+  # Revisa si el request  es de tipo patch, es decir, llenaron el formulario y lo ingresaron
   def finish_signup
-    if request.patch? && params[:user] # Revisa si el request es de tipo patch, es decir, llenaron el formulario y lo ingresaron
+    if request.patch? && params[:user]
       @user = User.find(params[:id])
 
       if @user.update(user_params)

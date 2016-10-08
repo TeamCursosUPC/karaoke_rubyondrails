@@ -24,7 +24,7 @@
 
             <%= link_to edit_user_registration_path, :class => "dropdown-toggle" do %>
                 <%= image_tag("user2-160x160.jpg", :alt => "User Image", :class => "user-image") %>
-                <span class="hidden-xs"><%= current_user.email %></span>
+                <span class="hidden-xs"><%= current_user.nombre %> <%= current_user.apellido_paterno %></span>
             <% end %>
 
           </li>

@@ -113,8 +113,8 @@ p "Created #{Reserf.count} Reserves"
 #Seeders Usuarios
 User.destroy_all
 users = User.create([
-	{ email: 'alancornejo@icloud.com', password: 'cornejo', :password_confirmation => 'cornejo', role: 'admin' },
-	{ email: 'alan_cs85@hotmail.com',  password: 'salazar', :password_confirmation => 'salazar', role: 'cliente' },
+	{ email: 'alancornejo@icloud.com', password: 'cornejo', :password_confirmation => 'cornejo', role: 'admin', 	  data_completed:1 },
+	{ email: 'alan_cs85@hotmail.com',  password: 'salazar', :password_confirmation => 'salazar', role: 'cliente', 	data_completed:0 },
 ])
 
 p "Created #{User.count} Usuarios"
