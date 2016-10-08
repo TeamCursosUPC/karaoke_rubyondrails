@@ -21,4 +21,12 @@ Rails.application.routes.draw do
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
   root to: 'home#index', as: 'home'
 
+  #Seccion Inicio - Martin
+  get 'pagesusers/reservasala' 
+  get 'pagesusers/solicitacancion'
+  get 'pagesusers/userregistration'
+  get 'pagesusers/solicitapedido'
+  get 'cliente',  to: 'pagesusers#index', as: 'cliente'
+  #Seccion Fin - Martin
+
 end

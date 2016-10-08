@@ -12,6 +12,7 @@
 #
 
 
+
 class Comment < ApplicationRecord
   belongs_to :room
     #Validaciones de Presencia

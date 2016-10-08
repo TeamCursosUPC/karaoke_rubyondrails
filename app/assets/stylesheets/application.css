@@ -10,4 +10,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *Inicio estilos Martin
+ *= require font-awesome
+ *= require ionicons
+ *= require Bootstrap-3.3.6/css/bootstrap
+ *Fin estilos Martin
  */
