@@ -8,6 +8,7 @@
 #  updated_at :datetime         not null
 #
 
+
 class Request < ApplicationRecord
   belongs_to :user
 end

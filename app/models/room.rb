@@ -12,6 +12,7 @@
 #
 
 
+
 class Room < ApplicationRecord
   belongs_to :local
   has_many :comment

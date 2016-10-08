@@ -3,6 +3,7 @@
     <%= f.text_field :tipo %>
     <%= f.text_field :precio %>
     <%= f.text_field :disponibilidad %>
+    <%= f.collection_select :local_id, Local.all, :id, :nombre, label: "Local:" %>
     <%= link_to 'Cancelar', products_path, class:"btn btn-danger"  %>
     <%= f.submit "Guardar", class:"btn btn-success" %>
 <% end %>

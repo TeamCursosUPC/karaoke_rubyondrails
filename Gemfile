@@ -3,13 +3,17 @@ source 'https://rubygems.org'
 # Gemas instaladas
 # por el equipo de Desarrollo
 gem 'adminlte2-rails'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem "font-awesome-rails"
 gem 'ionicons-rails'
 gem 'bootstrap_form'
-gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'devise'
 gem "pundit"
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+gem 'omniauth-google-oauth2'
+gem 'annotate', '~> 2.7', '>= 2.7.1'
+gem 'render_404', '~> 0.0.15'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -57,7 +61,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#Alfredo - para usar annotate
-gem 'annotate', '~> 2.7', '>= 2.7.1'
-gem 'bootstrap_form'
-gem 'render_404', '~> 0.0.15'
+

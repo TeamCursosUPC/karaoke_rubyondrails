@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :path => "", :path_names => {
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }, :path => "", :path_names => {
       :sign_in      => 'login',
       :sign_out     => 'logout',
       :password     => 'secret',
@@ -7,7 +7,6 @@ Rails.application.routes.draw do
       :unlock       => 'unlock',
       :registration => 'register',
       :sign_up      => 'new' }
-
   resources :requests
   resources :comments
   resources :rooms
@@ -19,5 +18,17 @@ Rails.application.routes.draw do
 
   get 'users', to: 'users#index', as: 'users'
   get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
+
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
+
   root to: 'home#index', as: 'home'
+
+  #Seccion Inicio - Martin
+  get 'pagesusers/reservasala' 
+  get 'pagesusers/solicitacancion'
+  get 'pagesusers/userregistration'
+  get 'pagesusers/solicitapedido'
+  get 'cliente',  to: 'pagesusers#index', as: 'cliente'
+  #Seccion Fin - Martin
+
 end

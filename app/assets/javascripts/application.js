@@ -7,17 +7,20 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // compiled file. JavaScript code in this file should be added after the last require_* statement.
 //
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
 // = require jquery
+// = require app
 // = require jquery_ujs
 // = require turbolinks
-// = require bootstrap
-// = require dataTables/jquery.dataTables
-// = require dataTables/bootstrap/3/jquery.dataTables.bootstrap
-// = require dataTables/extras/dataTables.responsive
-// = require app
+// = require Bootstrap-3.3.6/js/bootstrap
+// = require DataTables-1.10.12/js/jquery.dataTables
+// = require DataTables-1.10.12/js/dataTables.bootstrap
+// = require Buttons-1.2.2/js/dataTables.buttons
+// = require Buttons-1.2.2/js/buttons.bootstrap
+// = require Buttons-1.2.2/js/buttons.html5
+// = require Buttons-1.2.2/js/buttons.print
+// = require Responsive-2.1.0/js/dataTables.responsive
+// = require Responsive-2.1.0/js/responsive.bootstrap
+// = require Select-1.2.0/js/dataTables.select
 // = require_tree .
 
 

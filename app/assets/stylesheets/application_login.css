@@ -10,11 +10,12 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require bootstrap
  *= require font-awesome
  *= require ionicons
+ *= require Bootstrap-3.3.6/css/bootstrap
  *= require login/login
  *= require AdminLTE/AdminLTE
  *= require AdminLTE/skins/skin-red
  *= require AdminLTE/skins/skin-green
+ *= require Bootstrap-3.3.6/css/bootstrap-social
  */
