@@ -36,7 +36,13 @@
               <td><%= product.nombre %></td>
               <td><%= product.tipo %></td>
               <td><%= product.precio %></td>
-              <td><%= product.disponibilidad %></td>
+              <td><%=
+                if product.disponibilidad == '1'
+                  'Disponnible'
+                else
+                  'No Disponible'
+                end
+              %></td>
               <td><%= product.local.nombre %></td>
               <td align="center">
                 <%= link_to(edit_product_path(product)) do %>

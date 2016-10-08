@@ -17,7 +17,13 @@
 
 <p>
   <strong>Disponibilidad:</strong>
-  <%= @product.disponibilidad %>
+  <%=
+    if @product.disponibilidad == '1'
+      'Disponible'
+    else
+      'No Disponible'
+    end
+  %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
