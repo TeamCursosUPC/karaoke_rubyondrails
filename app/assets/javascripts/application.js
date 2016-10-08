@@ -12,6 +12,7 @@
 // = require turbolinks
 // = require app
 // = require Bootstrap-3.3.6/js/bootstrap
+// = require DataTables-1.10.12/js/dataTables.js
 // = require DataTables-1.10.12/js/jquery.dataTables
 // = require DataTables-1.10.12/js/dataTables.bootstrap
 // = require Buttons-1.2.2/js/dataTables.buttons
