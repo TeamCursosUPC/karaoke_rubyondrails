@@ -17,6 +17,7 @@
         <th>Genero</th>
         <th>Numero Movil</th>
         <th>Rol</th>
+        <th>Completed</th>
       </tr>
       </thead>
 
@@ -29,9 +30,22 @@
             <td><%= user.apellido_materno %></td>
             <td><%= user.email %></td>
             <td><%= user.fecha_nacimiento %></td>
-            <td><%= user.genero %></td>
+            <td><%=
+              if user.genero == false
+                'Masculino'
+              else
+                'Femenino'
+              end
+            %></td>
             <td><%= user.numero_movil %></td>
             <td><%= user.role %></td>
+            <td><%=
+              if user.data_completed == 0
+                'Incompleto'
+              else
+                'Completo'
+              end
+            %></td>
           </tr>
       <% end %>
       </tbody>

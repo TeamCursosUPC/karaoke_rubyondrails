@@ -51,13 +51,13 @@ class User < ActiveRecord::Base
         password = Devise.friendly_token[0,20]
         if auth.provider == 'facebook'
           user = User.new(
-              email: email ? email : "#{auth.uid}@change-me.com",
+              email: email ? email : "#{auth.uid}@karaokedev.com.pe",
               password: password,
               password_confirmation: password
           )
         elsif auth.provider == 'twitter'
           user = User.new(
-              email: "#{auth.uid}@change-me.com",
+              email: "#{auth.uid}@karaokedev.com.pe",
               password: password,
               password_confirmation: password
           )
@@ -74,9 +74,9 @@ class User < ActiveRecord::Base
     user
   end
 
-  def email_verified?
-    if self.email
-      if self.email.split('@')[1] == 'change-me.com'
+  def completed_verified?
+    if self.data_completed
+      if self.data_completed == 0
         return false
       else
         return true

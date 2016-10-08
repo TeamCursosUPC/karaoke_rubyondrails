@@ -44,12 +44,19 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="genero">Genero</label>
               <div class="col-md-5">
-                <select id="genero" name="genero" class="form-control">
-                  <option value="true">Masculino</option>
-                  <option value="false">Femenino</option>
-                </select>
+                <%= f.select(:genero, [ ['Masculino',false], ['Femenino',true] ], {}, { :class => 'form-control' }) %>
               </div>
             </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="apellido_materno">Apellido Materno</label>
+              <div class="col-md-5">
+                <%= f.text_field :numero_movil, placeholder: "Escribe tu Numero Movil", class: "form-control input-md", required:"" %>
+              </div>
+            </div>
+
+            <%= f.hidden_field :data_completed, value:1 %>
 
             <!-- Password input-->
             <div class="form-group has-error">

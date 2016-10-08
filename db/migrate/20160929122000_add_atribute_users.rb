@@ -8,5 +8,6 @@ class AddAtributeUsers < ActiveRecord::Migration[5.0]
     add_column :users, :genero, :boolean, default: false
     add_column :users, :numero_movil, :integer
     add_column :users, :role, :integer
+    add_column :users, :data_completed, :integer, default: 0
   end
 end
