@@ -29,7 +29,9 @@ class ApplicationController < ActionController::Base
         :apellido_materno,
         :fecha_nacimiento,
         :genero,
-        :numero_movil
+        :numero_movil,
+        :data_completed
+
     ) }
   end
 
