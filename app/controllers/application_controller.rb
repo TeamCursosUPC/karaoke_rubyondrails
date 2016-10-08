@@ -5,6 +5,13 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  private
+
+  def user_not_authorized
+    flash[:alert] = "Usted no esta autorizado para esta vista."
+    redirect_to(request.referrer || home_path )
+  end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
@@ -23,6 +30,14 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    '/'
+
+    if current_user.role == 'admin'
+      '/'
+    else
+      '/cliente'
+    end
+
   end
+
+
 end

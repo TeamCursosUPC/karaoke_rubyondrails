@@ -1,5 +1,6 @@
 class UsersController < KaraokeController
   def index
+    authorize User
     @users = User.all
   end
 

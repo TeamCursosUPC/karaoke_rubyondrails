@@ -8,9 +8,9 @@
 // compiled file. JavaScript code in this file should be added after the last require_* statement.
 //
 // = require jquery
-// = require app
 // = require jquery_ujs
 // = require turbolinks
+// = require app
 // = require Bootstrap-3.3.6/js/bootstrap
 // = require DataTables-1.10.12/js/jquery.dataTables
 // = require DataTables-1.10.12/js/dataTables.bootstrap

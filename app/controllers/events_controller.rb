@@ -4,26 +4,32 @@ class EventsController < KaraokeController
   # GET /events
   # GET /events.json
   def index
+    authorize Event
     @events = Event.all
   end
 
   # GET /events/1
   # GET /events/1.json
   def show
+    authorize Event
   end
 
   # GET /events/new
   def new
+    authorize Event
     @event = Event.new
   end
 
   # GET /events/1/edit
   def edit
+    authorize Event
   end
 
   # POST /events
   # POST /events.json
   def create
+    authorize Event
+
     @event = Event.new(event_params)
 
     respond_to do |format|
@@ -40,6 +46,8 @@ class EventsController < KaraokeController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
+    authorize Event
+
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
@@ -54,6 +62,8 @@ class EventsController < KaraokeController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
+    authorize Event
+
     @event.destroy
     respond_to do |format|
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }

@@ -4,31 +4,37 @@ class LocalsController < KaraokeController
   # GET /locals
   # GET /locals.json
   def index
+    authorize Local
     @locals = Local.all
   end
 
   # GET /locals/1
   # GET /locals/1.json
   def show
+    authorize Local
   end
 
   # GET /locals/new
   def new
+    authorize Local
     @local = Local.new
   end
 
   # GET /locals/1/edit
   def edit
+    authorize Local
   end
 
   # POST /locals
   # POST /locals.json
   def create
+    authorize Local
+
     @local = Local.new(local_params)
 
     respond_to do |format|
       if @local.save
-        format.html { redirect_to @local, notice: 'Local was successfully created.' }
+        format.html { redirect_to @local, notice: 'El Local ha sido creado' }
         format.json { render :show, status: :created, location: @local }
       else
         format.html { render :new }
@@ -40,9 +46,11 @@ class LocalsController < KaraokeController
   # PATCH/PUT /locals/1
   # PATCH/PUT /locals/1.json
   def update
+    authorize Local
+
     respond_to do |format|
       if @local.update(local_params)
-        format.html { redirect_to @local, notice: 'Local was successfully updated.' }
+        format.html { redirect_to @local, notice: 'El Local ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @local }
       else
         format.html { render :edit }
@@ -54,9 +62,11 @@ class LocalsController < KaraokeController
   # DELETE /locals/1
   # DELETE /locals/1.json
   def destroy
+    authorize Local
+
     @local.destroy
     respond_to do |format|
-      format.html { redirect_to locals_url, notice: 'Local was successfully destroyed.' }
+      format.html { redirect_to locals_url, notice: 'El Local ha sido eliminado.' }
       format.json { head :no_content }
     end
   end

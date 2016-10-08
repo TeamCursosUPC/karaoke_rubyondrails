@@ -3,14 +3,14 @@ source 'https://rubygems.org'
 # Gemas instaladas
 # por el equipo de Desarrollo
 gem 'adminlte2-rails'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 gem 'ionicons-rails'
 gem 'bootstrap_form'
 gem 'devise'
-gem "pundit"
-gem "omniauth"
-gem "omniauth-facebook"
-gem "omniauth-twitter"
+gem 'pundit'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 
 gem 'annotate', '~> 2.7', '>= 2.7.1'
