@@ -27,6 +27,7 @@ class RequestsController < KaraokeController
     @request = Request.new(request_params)
     respond_to do |format|
       if @request.save
+        session[:id_pedido] = @request.id
 
         format.html { redirect_to @request, notice: 'El Pedido ha sido creado.' }
         format.json { render :show, status: :created, location: @request }

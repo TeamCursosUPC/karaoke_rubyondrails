@@ -17,12 +17,15 @@ Rails.application.routes.draw do
   resources :events
   resources :products
 
-  get 'users', to: 'users#index', as: 'users'
-  get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
-  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
   root to: 'home#index', as: 'home'
-  get 'reserves', to: 'reserves#new'
+  get 'users', to: 'users#index', as: 'users'
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
 
+  get 'reserves', to: 'reserves#new'
+  get 'pedido_productos', to: 'pagesusers#solicitapedido'
+  get 'detalle_pedido', to: 'pagesusers#detalle_pedido'
+
+  #get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
   get 'pagesusers/reservasala' 
   get 'pagesusers/solicitacancion'
   get 'pagesusers/userregistration'
