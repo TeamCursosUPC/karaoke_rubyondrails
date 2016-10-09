@@ -10,6 +10,7 @@ class ReservesController < KaraokeController
   # GET /reserves/1
   # GET /reserves/1.json
   def show
+    @reserf = Reserf.find(params[:id])
   end
 
   # GET /reserves/new
@@ -19,6 +20,7 @@ class ReservesController < KaraokeController
 
   # GET /reserves/1/edit
   def edit
+    @reserf = Reserf.find(params[:id])
   end
 
   # POST /reserves
@@ -68,6 +70,6 @@ class ReservesController < KaraokeController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reserf_params
-      params.require(:reserf).permit(:fecha_inicio, :hora_inicio, :descripcion, :user_id, :room_id)
+      params.require(:reserf).permit(:fecha_inicio, :hora_inicio, :descripcion, :local_id, :user_id, :room_id)
     end
 end

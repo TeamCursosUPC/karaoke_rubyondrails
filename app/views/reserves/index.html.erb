@@ -22,6 +22,7 @@
         <th>Hora inicio</th>
         <th>Descripcion</th>
         <th>User</th>
+        <th>Local</th>
         <th>Room</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -35,13 +36,8 @@
             <td><%= reserf.fecha_inicio %></td>
             <td><%= reserf.hora_inicio.strftime("%H:%M:%S") %></td>
             <td><%= reserf.descripcion %></td>
-            <td>
-            <% if (reserf.user.nombre != nil) then %>
-              <%= reserf.user.nombre %>
-            <% else %>
-                <%= reserf.user.email %>
-            <% end %>
-            </td>
+            <td><%= reserf.user.email %></td>
+            <td><%= reserf.local.nombre %></td>
             <td><%= reserf.room.nombre %></td>
             <td align="center">
               <%= link_to(edit_reserf_path(reserf)) do %>
