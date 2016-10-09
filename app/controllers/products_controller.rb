@@ -70,6 +70,6 @@ class ProductsController < KaraokeController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:nombre, :tipo, :precio, :disponibilidad)
+      params.require(:product).permit(:nombre, :tipo, :precio, :disponibilidad, :local_id)
     end
 end

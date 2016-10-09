@@ -44,13 +44,13 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="genero">Genero</label>
               <div class="col-md-5">
-                <%= f.select(:genero, [ ['Masculino',false], ['Femenino',true] ], {}, { :class => 'form-control' }) %>
+                <%= f.select(:genero, [ 'Seleccione', ['Masculino',false], ['Femenino',true] ], {}, { :class => 'form-control' } ) %>
               </div>
             </div>
 
             <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-4 control-label" for="apellido_materno">Apellido Materno</label>
+              <label class="col-md-4 control-label" for="apellido_materno">Telefono Movil</label>
               <div class="col-md-5">
                 <%= f.text_field :numero_movil, placeholder: "Escribe tu Numero Movil", class: "form-control input-md", required:"" %>
               </div>

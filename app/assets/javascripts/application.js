@@ -24,7 +24,6 @@
 // = require Select-1.2.0/js/dataTables.select
 // = require_tree .
 
-
 function dataTables_lang_spanish(){
     var lang = {
         "sProcessing":     "Procesando...",

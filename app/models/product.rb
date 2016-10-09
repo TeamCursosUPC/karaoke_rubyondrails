@@ -14,8 +14,14 @@
 
 class Product < ApplicationRecord
 	belongs_to :local
+
   # Confirmamos el email y validamos que no sean vacios con presence
   # mostramos el mensaje de error con message
   validates :nombre , confirmation: true, presence: { message: " es requerido"}
+  #validates :precio, numericality: { only_integer: true }
+  validates :disponibilidad , confirmation: true, presence: { message: " es requerido"}
+  validates :tipo , confirmation: true, presence: { message: " es requerido"}
+
+  validates :local_id , presence: true , confirmation: true
 
 end

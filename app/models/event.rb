@@ -13,9 +13,13 @@
 
 
 class Event < ApplicationRecord
+    belongs_to :local
+
     #Validamos los datos del evento que se agregue
     # mostramos el mensaje de error con message
     validates :Nombre_de_evento , confirmation: true, presence: { message: " dato obligatorio"}
-    validates :Capacidad_maxima , :numericality => { :only_integer => true, :greater_than => 5 } 
+    validates :Capacidad_maxima , :numericality => { :only_integer => true }
     validates :Descripcion , confirmation: true, presence: { message: " dato obligatorio"}
+
+    validates :local_id , presence: true , confirmation: true
 end

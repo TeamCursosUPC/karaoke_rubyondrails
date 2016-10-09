@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(version: 20161001233312) do
     t.datetime "Fecha_y_hora"
     t.integer  "Capacidad_maxima"
     t.string   "Descripcion"
+    t.integer  "local_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.index ["local_id"], name: "index_events_on_local_id"
   end
 
   create_table "identities", force: :cascade do |t|

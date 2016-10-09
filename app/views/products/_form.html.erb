@@ -1,9 +1,20 @@
 <%= bootstrap_form_for(@product) do |f| %>
+    <% if product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(product.errors.count, "Campo mal llenado") %> no se pudo guardar:</h2>
+
+          <ul>
+            <% product.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <%= f.text_field :nombre %>
-    <%= f.text_field :tipo %>
+    <%= f.select(:tipo, [ 'Bebida', 'Piqueos' ], {}, { :class => 'form-control' }) %>
     <%= f.text_field :precio %>
     <%= f.select(:disponibilidad, [ ['Disponible',1], ['No Disponible',0] ], {}, { :class => 'form-control' }) %>
-    <%= f.collection_select :local_id, Local.all, :id, :nombre, label: "Local:" %>
+    <%= f.collection_select :local_id, Local.all, :id, :nombre, label: "Local:", :prompt => true %>
     <%= link_to 'Cancelar', products_path, class:"btn btn-danger"  %>
     <%= f.submit "Guardar", class:"btn btn-success" %>
 <% end %>
