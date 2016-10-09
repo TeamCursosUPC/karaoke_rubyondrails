@@ -1,5 +1,5 @@
 class PagesusersController < ApplicationController
-  layout 'internal', except: [:index, :solicitapedido, :userregistration, :solicitacancion, :reservasala]
+  layout 'internal', except: [:index, :solicitapedido, :userregistration, :solicitacancion, :reservasala, :comprobantepago]
 
   def index
 
@@ -38,8 +38,8 @@ class PagesusersController < ApplicationController
 
   end 
 
-  def crearpedido
-
+  def comprobantepago
+     @detailRequestProductAll = DetailRequestProduct.all
   end
 
 end

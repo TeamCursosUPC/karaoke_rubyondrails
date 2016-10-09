@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get 'pagesusers/solicitacancion'
   get 'pagesusers/userregistration'
   get 'pagesusers/solicitapedido'
+  get 'pagesusers/comprobantepago'
   get 'cliente',  to: 'pagesusers#index', as: 'cliente'
   #Seccion Fin - Martin
 
