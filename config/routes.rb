@@ -20,18 +20,15 @@ Rails.application.routes.draw do
 
   root to: 'home#index', as: 'home'
   get 'users', to: 'users#index', as: 'users'
+  get 'cliente',  to: 'pagesusers#index', as: 'cliente'
+
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
 
   get 'reserves', to: 'reserves#new'
   get 'pedido_productos', to: 'pagesusers#solicitapedido'
   get 'detalle_pedido', to: 'pagesusers#detalle_pedido'
 
-  #get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
-  get 'pagesusers/reservasala' 
-  get 'pagesusers/solicitacancion'
-  get 'pagesusers/userregistration'
-  get 'pagesusers/solicitapedido'
-  get 'pagesusers/comprobantepago'
-  get 'cliente',  to: 'pagesusers#index', as: 'cliente'
+  get 'pedido_cancion', to: 'pagesusers#solicitacancion'
+  get 'comprobante', to: 'pagesusers#comprobantepago'
 
 end

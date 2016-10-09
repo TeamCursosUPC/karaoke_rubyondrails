@@ -26,7 +26,7 @@ class DetailRequestProductsController < ApplicationController
   def create
     @detail_request_product = DetailRequestProduct.new(detail_request_product_params)
     @detail_request_product.save
-    redirect_to pagesusers_solicitapedido_path
+    redirect_to pedido_productos_path
     # respond_to do |format|
     #   if @detail_request_product.save
     #     format.html { redirect_to @detail_request_product, notice: 'Detail request product was successfully created.' }
@@ -57,7 +57,7 @@ class DetailRequestProductsController < ApplicationController
   # DELETE /detail_request_products/1.json
   def destroy
     @detail_request_product.destroy
-    redirect_to pagesusers_solicitapedido_path
+    redirect_to detalle_pedido_path
     # respond_to do |format|
     #   format.html { redirect_to detail_request_products_url, notice: 'Detail request product was successfully destroyed.' }
     #   format.json { head :no_content }

@@ -28,7 +28,7 @@
       <% @requests.each do |request| %>
           <tr>
             <td><%= request.id %></td>
-            <td><%= request.user.nombre %> <%= request.user.apellido_paterno %> <%= request.user.apellido_materno %></td>
+            <td><%= current_user.nombre %> <%= current_user.apellido_paterno %></td>
             <td align="center">
               <%= link_to(edit_request_path(request)) do %>
                   <p data-placement="top" data-toggle="tooltip" title="Edit">

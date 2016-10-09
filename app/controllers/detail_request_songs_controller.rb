@@ -26,7 +26,7 @@ class DetailRequestSongsController < ApplicationController
   def create
     @detail_request_song = DetailRequestSong.new(detail_request_song_params)
     @detail_request_song.save
-    redirect_to pagesusers_solicitacancion_path
+    redirect_to pedido_cancion_path
     # respond_to do |format|
     #   if  @detail_request_song.save
     #     format.html { redirect_to @detail_request_song, notice: 'Detail request song was successfully created.' }
@@ -56,7 +56,7 @@ class DetailRequestSongsController < ApplicationController
   # DELETE /detail_request_songs/1.json
   def destroy
     @detail_request_song.destroy
-    redirect_to pagesusers_solicitacancion_path
+    redirect_to pedido_cancion_path
     # respond_to do |format|
     #   format.html { redirect_to detail_request_songs_url, notice: 'Detail request song was successfully destroyed.' }
     #   format.json { head :no_content }
