@@ -9,7 +9,7 @@ class CommentsController < KaraokeController
 
   def index_comments_x_rooms
     @comments = Comment.all
-    @rooms = Room.find(params[:id])
+    @room = Room.find(params[:id])
   end
 
   # GET /comments/1
@@ -78,4 +78,8 @@ class CommentsController < KaraokeController
     def comment_params
       params.require(:comment).permit(:room_id, :usuario, :descripcion, :valoracion)
     end
+
+  def room_params
+    params.require(:room).permit(:nombre, :capacidad, :descripcion, :local_id)
+  end
 end

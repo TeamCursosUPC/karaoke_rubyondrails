@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   root to: 'home#index', as: 'home'
   get 'reserves', to: 'reserves#new'
 
-  get 'comentarios/:id', to: 'comments#index_comments_x_rooms', as: 'comentarios'
+  get 'comentarios/:id/', to: 'comments#index_comments_x_rooms', as: 'comentarios'
 
   get 'pagesusers/reservasala' 
   get 'pagesusers/solicitacancion'

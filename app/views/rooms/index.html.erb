@@ -81,7 +81,7 @@
                   <td><%= room.descripcion %></td>
                   <td><%= room.local.nombre %></td>
                   <td align="center">
-                    <%= link_to(comentarios_path(@rooms)) do %>
+                    <%= link_to(comentarios_path(room)) do %>
                         <p data-placement="top" data-toggle="tooltip" title="Edit">
                           <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" >
                             <span class="glyphicon glyphicon-pencil"></span>
