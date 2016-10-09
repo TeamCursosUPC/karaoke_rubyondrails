@@ -25,7 +25,6 @@ class RequestsController < KaraokeController
   # POST /requests.json
   def create
     @request = Request.new(request_params)
-
     respond_to do |format|
       if @request.save
         format.html { redirect_to @request, notice: 'Request was successfully created.' }

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :detail_request_products
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }, :path => "", :path_names => {
       :sign_in      => 'login',
       :sign_out     => 'logout',
