@@ -1,0 +1,27 @@
+<%= form_for(detail_request_song) do |f| %>
+  <% if detail_request_song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(detail_request_song.errors.count, "error") %> prohibited this detail_request_song from being saved:</h2>
+
+      <ul>
+      <% detail_request_song.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :request_id %>
+    <%= f.text_field :request_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :song_id %>
+    <%= f.text_field :song_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

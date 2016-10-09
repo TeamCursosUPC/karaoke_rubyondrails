@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :detail_request_songs
   resources :detail_request_products
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }, :path => "", :path_names => {
       :sign_in      => 'login',
@@ -27,6 +28,7 @@ Rails.application.routes.draw do
   get 'pagesusers/solicitacancion'
   get 'pagesusers/userregistration'
   get 'pagesusers/solicitapedido'
+  get 'pagesusers/comprobantepago'
   get 'cliente',  to: 'pagesusers#index', as: 'cliente'
 
 end
