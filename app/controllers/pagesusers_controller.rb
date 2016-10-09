@@ -31,7 +31,20 @@ class PagesusersController < KaraokeController
   end
 
   def solicitacancion
-    @songs = Song.all
+    @q = params[:q]
+    @song = Song.all
+    @request = Request.new
+    @requestAll = Request.all
+    @detailRequestSong = DetailRequestSong.new
+    @detailRequestSongAll = DetailRequestSong.all
+
+    #request_params={"user_id"=>"2"} #cambiar por usuario actual
+    #@request = Request.new(request_params)
+    #@request.save
   end 
+
+  def comprobantepago
+     @detailRequestProductAll = DetailRequestProduct.all
+  end
 
 end

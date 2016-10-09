@@ -1,0 +1,1 @@
+json.partial! "detail_request_songs/detail_request_song", detail_request_song: @detail_request_song

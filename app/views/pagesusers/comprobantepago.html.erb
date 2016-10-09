@@ -1,0 +1,40 @@
+<div class="box box-primary">
+    <div class="box-header">
+      <h3 class="box-title">Comprobante de Pago</h3>
+      <div class="pull-right">
+          <%= link_to(pagesusers_solicitapedido_path) do %>
+              <p data-placement="top" data-toggle="tooltip" title="New">
+                <button class="btn btn-sm btn-primary btn-create" data-title="New" data-toggle="modal">
+                  <span class="glyphicon glyphicon-plus"></span> Nueva Pedido
+                </button>
+              </p>
+          <% end %>
+          <span id="notice" class="alert"><%= notice %></span>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body table-responsive no-padding">
+
+      <table id='comprobantepago' class="display" cellspacing="0" width="100%">
+        <thead>
+          <tr >
+            <th>#</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @detailRequestProductAll.each do |room| %>
+            <tr>
+              <td><%= room.product.nombre %></td>
+              <td><%= room.cantidad %></td>
+              <td><%= room.precio %></td>
+             </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    <!-- /.box-body -->
+  </div>
