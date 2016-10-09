@@ -122,3 +122,9 @@ users = User.create([
 
 p "Created #{User.count} Usuarios"
 
+ #Seeders Usuarios
+User.destroy_all
+users = User.create([
+{ nombre:'Martin', apellido_paterno:'Marquina', apellido_materno:'Gutierrez', documento_identidad:'42938809', fecha_nacimiento: '28-04-1985', genero:'Masculino', numero_movil: '900865410'}
+])
+

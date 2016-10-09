@@ -16,11 +16,13 @@
 </select>
 
 <%= bootstrap_form_for(@detailRequestProduct) do |f| %>
-  <%= f.text_field :request_id, label: "N° Pedido:", value: @idpedido, :readonly => true %>
+  <%= f.text_field :descripcion, label: "N° Pedido:", value: @idpedido, :disabled => true %>
   <%= f.collection_select :product_id, Product.all, :id, :nombre, label: "Seleccione Producto:" %>
   <%= f.text_field :cantidad, label: "Ingrese Cantidad:" %>
   <%= f.submit "Hacer pedido", class: "btn btn-success" %>
 <% end %>
+
+
     <br>
 <br>
 <br>
@@ -58,8 +60,6 @@
                     <% end %>
                   </td>
                 </tr>
-                <% puts "DEBUG --------------> #{@totalpedido}" %>
-
             <% end %>
                 <% puts "DEBUG --------------> #{@totalpedido}" %>
                 <tr>
