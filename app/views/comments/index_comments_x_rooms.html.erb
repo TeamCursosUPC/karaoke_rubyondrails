@@ -28,7 +28,7 @@
         </thead>
 
         <tbody>
-        <% @comments.each do |comment| %>
+        <% @comments.where(:id => @room.id).each do |comment| %>
             <tr>
               <td><%= comment.id %></td>
               <td><%= comment.room.nombre %></td>
