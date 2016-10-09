@@ -7,6 +7,11 @@ class CommentsController < KaraokeController
     @comments = Comment.all
   end
 
+  def index_comments_x_rooms
+    @comments = Comment.all
+    @rooms = Room.find(params[:id])
+  end
+
   # GET /comments/1
   # GET /comments/1.json
   def show

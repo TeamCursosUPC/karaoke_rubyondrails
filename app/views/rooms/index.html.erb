@@ -15,6 +15,7 @@
     <!-- /.box-header -->
     <div class="box-body table-responsive no-padding">
 
+     <% if current_user.role == 'admin' %>
       <table id='rooms' class="display" cellspacing="0" width="100%">
         <thead>
           <tr >
@@ -58,6 +59,41 @@
         <% end %>
         </tbody>
       </table>
+      <% else %>
+          <table id='rooms' class="display" cellspacing="0" width="100%">
+            <thead>
+            <tr >
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Capacidad</th>
+              <th>Descripción</th>
+              <th>Local</th>
+              <th>Ver comentarios</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <% @rooms.each do |room| %>
+                <tr>
+                  <td><%= room.id %></td>
+                  <td><%= room.nombre %></td>
+                  <td><%= room.capacidad %></td>
+                  <td><%= room.descripcion %></td>
+                  <td><%= room.local.nombre %></td>
+                  <td align="center">
+                    <%= link_to(comentarios_path(@rooms)) do %>
+                        <p data-placement="top" data-toggle="tooltip" title="Edit">
+                          <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" >
+                            <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                        </p>
+                    <% end %>
+                  </td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+      <% end %>
     </div>
     <!-- /.box-body -->
   </div>

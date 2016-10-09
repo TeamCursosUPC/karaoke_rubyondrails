@@ -11,10 +11,10 @@
   <% end %>
 
 <div class="field">
-    <%= f.collection_select :room_id, Room.all, :id, :nombre, label: "Sala:" %>
+    <%= f.collection_select :room_id, Room.all, :id, :nombre, label: "Sala:", include_blank: true %>
     <%= f.text_field :usuario , label: "Usuario:", value: current_user.email, readonly:true %>
     <%= f.text_field :descripcion, label: "Descripción:" %>
-    <%= f.select :valoracion, [['Muy Malo', 1], ['Malo', 2], ['Regular', 3], ['Bueno', 4], ['Muy Bueno', 5]], label: "Valorar:" %>
+    <%= f.select :valoracion, [['Muy Malo', 1], ['Malo', 2], ['Regular', 3], ['Bueno', 4], ['Muy Bueno', 5]], label: "Valorar:", include_blank: true %>
     <%= f.submit "Crear Comentario", class: "btn btn-success" %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
               comments_path, :class => 'btn btn-default' %>
