@@ -10,10 +10,10 @@
       </ul>
     </div>
   <% end %>
-  <%= f.text_field :nombre, label: "Nombre del local:" %>
-  <%= f.text_field :capacidad, label: "Direccion del local:" %>
-  <%= f.text_field :descripcion, label: "Descripcion del local:" %>
-  <%= f.collection_select :local_id, Local.all, :id, :nombre, label: "Local:" %>
+  <%= f.text_field :nombre, label: "Nombre:" %>
+  <%= f.text_field :capacidad, label: "Capacidad:" %>
+  <%= f.text_field :descripcion, label: "Descripcion:" %>
+  <%= f.collection_select :local_id, Local.all, :id, :nombre, label: "Local:", :prompt => true %>
   <%= f.submit "Guardar Cambios", class: "btn btn-success" %>
   <%= link_to 'Cancelar', locals_path, class:"btn btn-danger"  %>
 <% end %>

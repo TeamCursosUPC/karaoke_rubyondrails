@@ -19,6 +19,10 @@ class Room < ApplicationRecord
 
  	#Validaciones de Presencia
 	validates :nombre , presence: true , confirmation: true
+
+	validates :capacidad, length: { in: 1..1 , message: "Debe ser menor a 10 "}
+	validates :capacidad, numericality: { only_integer: true }
+
 	validates :capacidad , presence: true , confirmation: true
 	validates :local_id , presence: true , confirmation: true
 

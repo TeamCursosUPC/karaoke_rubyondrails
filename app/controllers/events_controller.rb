@@ -79,6 +79,6 @@ class EventsController < KaraokeController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:Nombre_de_evento, :Fecha_y_hora, :Capacidad_maxima, :Descripcion)
+      params.require(:event).permit(:Nombre_de_evento, :Fecha_y_hora, :Capacidad_maxima, :Descripcion, :local_id)
     end
 end
