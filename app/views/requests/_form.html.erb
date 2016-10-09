@@ -1,22 +1,23 @@
-<%= form_for(request) do |f| %>
-  <% if request.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(request.errors.count, "error") %> prohibited this request from being saved:</h2>
+<%= bootstrap_form_for(@request) do |f| %>
+    <% if request.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(request.errors.count, "error") %> prohibited this reserf from being saved:</h2>
 
-      <ul>
-      <% request.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% request.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
+    <%= f.collection_select :user_id, User.where(:id => current_user.id).all, :id, :email, :disabled => true, label: "Usuario:" %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit 'Guardar', :class => 'btn btn-primary'%>
+
+    <% if current_user.role == 'admin' %>
+        <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                    reserves_path, :class => 'btn btn-default' %>
+    <% end %>
 <% end %>
+

@@ -1,26 +1,23 @@
 
 <h1>Productos</h1>
 <h1><%= @q %></h1>
+<% puts "DEBUG --------------> #{@Current_user.inspect}" %>
+<% puts "DEBUG --------------> #{@products.find_by_local_id(7).inspect}" %>
 
-<div style = "display:none">
-	<%= @idpedido=Request.maximum("id") %>
-</div>
 
-<label  for="selectbasic" >Seleccionar Local:</label>
-<select id="selectbasic" name="selectbasic" class="form-control" onchange="this.form.submit()">
-  <% @local.each do |local| %>  
-    <option value="1">
-        <%= local.nombre %>
-    </option>
-  <% end %>
-</select>
+
+
+
 
 <%= bootstrap_form_for(@detailRequestProduct) do |f| %>
-  <%= f.text_field :request_id, label: "N° Pedido:", value: @idpedido, :readonly => true %>
+  <%= f.collection_select :request_id, Request.all, :id, :user_id, label: "Nuevo pedido:" %>
   <%= f.collection_select :product_id, Product.all, :id, :nombre, label: "Seleccione Producto:" %>
   <%= f.text_field :cantidad, label: "Ingrese Cantidad:" %>
   <%= f.submit "Hacer pedido", class: "btn btn-success" %>
+  <%= link_to 'Cancelar', "#" , class:"btn btn-danger"  %>
 <% end %>
+
+
     <br>
 <br>
 <br>
@@ -41,6 +38,7 @@
 
             <tbody>
             <% @totalpedido=0 %>
+            <% puts "DEBUG --------------> #{@totalpedido}" %>
             <% @detailRequestProductAll.each do |detailRequestProduct| %>
                 <% @totalpedido=@totalpedido+(detailRequestProduct.cantidad * detailRequestProduct.product.precio) %>
                 <tr>
@@ -59,7 +57,6 @@
                   </td>
                 </tr>
                 <% puts "DEBUG --------------> #{@totalpedido}" %>
-
             <% end %>
                 <% puts "DEBUG --------------> #{@totalpedido}" %>
                 <tr>
@@ -85,5 +82,3 @@
             </table>
             </tbody>
           </table>
-          <% @totalpedido %>
-          <h1><% @totalpedido.to_s %></h1>

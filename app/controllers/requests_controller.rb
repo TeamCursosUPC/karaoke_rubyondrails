@@ -25,10 +25,10 @@ class RequestsController < KaraokeController
   # POST /requests.json
   def create
     @request = Request.new(request_params)
-
     respond_to do |format|
       if @request.save
-        format.html { redirect_to @request, notice: 'Request was successfully created.' }
+
+        format.html { redirect_to @request, notice: 'El Pedido ha sido creado.' }
         format.json { render :show, status: :created, location: @request }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RequestsController < KaraokeController
   def update
     respond_to do |format|
       if @request.update(request_params)
-        format.html { redirect_to @request, notice: 'Request was successfully updated.' }
+        format.html { redirect_to @request, notice: 'El pedido ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @request }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class RequestsController < KaraokeController
   def destroy
     @request.destroy
     respond_to do |format|
-      format.html { redirect_to requests_url, notice: 'Request was successfully destroyed.' }
+      format.html { redirect_to requests_url, notice: 'El Pedido ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
