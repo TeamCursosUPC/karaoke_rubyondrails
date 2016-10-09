@@ -36,7 +36,7 @@
             <td><%= reserf.fecha_inicio %></td>
             <td><%= reserf.hora_inicio.strftime("%H:%M:%S") %></td>
             <td><%= reserf.descripcion %></td>
-            <td><%= reserf.user.email %></td>
+            <td><%= reserf.user.nombre %> <%= reserf.user.apellido_paterno %> <%= reserf.user.apellido_materno %></td>
             <td><%= reserf.local.nombre %></td>
             <td><%= reserf.room.nombre %></td>
             <td align="center">

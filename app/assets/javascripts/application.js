@@ -8,8 +8,6 @@
 // compiled file. JavaScript code in this file should be added after the last require_* statement.
 //
 // = require jquery
-// = require jquery_ujs
-// = require turbolinks
 // = require app
 // = require Bootstrap-3.3.6/js/bootstrap
 // = require DataTables-1.10.12/js/dataTables.js
@@ -17,12 +15,24 @@
 // = require DataTables-1.10.12/js/dataTables.bootstrap
 // = require Buttons-1.2.2/js/dataTables.buttons
 // = require Buttons-1.2.2/js/buttons.bootstrap
+// = require Buttons-1.2.2/js/buttons.colVis
+// = require Buttons-1.2.2/js/buttons.flash
 // = require Buttons-1.2.2/js/buttons.html5
 // = require Buttons-1.2.2/js/buttons.print
 // = require Responsive-2.1.0/js/dataTables.responsive
 // = require Responsive-2.1.0/js/responsive.bootstrap
 // = require Select-1.2.0/js/dataTables.select
-// = require_tree .
+
+// = require comments
+// = require locals
+// = require products
+// = require reserves
+// = require rooms
+// = require songs
+
+// require jquery_ujs
+// require turbolinks
+// require_tree .
 
 function dataTables_lang_spanish(){
     var lang = {
