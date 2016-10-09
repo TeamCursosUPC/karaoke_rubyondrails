@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detail Request Songs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Song</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detail_request_songs.each do |detail_request_song| %>
+      <tr>
+        <td><%= detail_request_song.request %></td>
+        <td><%= detail_request_song.song %></td>
+        <td><%= link_to 'Show', detail_request_song %></td>
+        <td><%= link_to 'Edit', edit_detail_request_song_path(detail_request_song) %></td>
+        <td><%= link_to 'Destroy', detail_request_song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detail Request Song', new_detail_request_song_path %>

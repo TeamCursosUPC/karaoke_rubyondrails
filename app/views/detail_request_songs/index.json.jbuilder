@@ -1,0 +1,1 @@
+json.array! @detail_request_songs, partial: 'detail_request_songs/detail_request_song', as: :detail_request_song

@@ -1,0 +1,2 @@
+module DetailRequestSongsHelper
+end
