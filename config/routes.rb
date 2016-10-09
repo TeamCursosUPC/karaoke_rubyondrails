@@ -31,4 +31,6 @@ Rails.application.routes.draw do
   get 'pedido_cancion', to: 'pagesusers#solicitacancion'
   get 'comprobante', to: 'pagesusers#comprobantepago'
 
+  get 'comentarios/:id', to: 'comments#index_comments_x_rooms', as: 'comentarios'
+
 end

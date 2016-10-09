@@ -4,14 +4,13 @@ class RoomsController < KaraokeController
   # GET /rooms
   # GET /rooms.json
   def index
-    authorize Room
     @rooms = Room.all
   end
 
   # GET /rooms/1
   # GET /rooms/1.json
   def show
-    authorize Room
+
   end
 
   # GET /rooms/new
