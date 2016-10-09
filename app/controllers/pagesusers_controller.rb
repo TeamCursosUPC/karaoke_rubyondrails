@@ -44,6 +44,8 @@ class PagesusersController < KaraokeController
   end 
 
   def comprobantepago
+     @id_pedido = session[:id_pedido]
+
      @detailRequestProductAll = DetailRequestProduct.all
   end
 

@@ -27,11 +27,16 @@
 
         <tbody>
         <% @detailRequestProductAll.each do |room| %>
+
+            <% if room.request.id == @id_pedido %>
             <tr>
+              <td><%= room.id %></td>
               <td><%= room.product.nombre %></td>
               <td><%= room.cantidad %></td>
-              <td><%= room.precio %></td>
+              <td><%= room.product.precio %></td>
              </tr>
+            <% end %>
+
         <% end %>
         </tbody>
       </table>
