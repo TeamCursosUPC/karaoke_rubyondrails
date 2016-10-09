@@ -17,6 +17,7 @@ class Local < ApplicationRecord
 	has_many :room
 	has_many :event
 	has_many :product
+	has_many :reserves
 
 	#Validaciones de Presencia
 	validates :mail , presence: true , confirmation: true

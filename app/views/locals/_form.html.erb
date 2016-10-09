@@ -16,7 +16,7 @@
   <%= f.text_field :telefono, label: "Telefono del local:" %>
   <%= f.text_field :mail, label: "Mail del local:" %>
   <%= f.text_field :descripcion, label: "Desscripcion del local:" %>
-  <%= f.text_field :administrador, label: "Usuario:" %>
+  <%= f.text_field :adminustrador , label: "Usuario:", value: current_user.email, readonly:true %>
   <%= f.submit "Guardar Cambios", class: "btn btn-success" %>
   <%= link_to 'Cancelar', locals_path, class:"btn btn-danger"  %>
 <% end %>

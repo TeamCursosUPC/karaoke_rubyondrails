@@ -16,7 +16,7 @@ jQuery ->
     lengthMenu        : [10, 20, 30, 40, 50]
     language          : dataTables_lang_spanish()
     columnDefs: [ {
-      "targets": [0]
+      "targets": [0,7,8]
       "orderable": false
     } ]
 

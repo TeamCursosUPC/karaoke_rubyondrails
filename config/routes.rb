@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'reservesClient', to: 'reserves#newClient', as: 'reCLient'
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
   root to: 'home#index', as: 'home'
-
+  get 'reserves', to: 'reserves#new'
 
   get 'pagesusers/reservasala' 
   get 'pagesusers/solicitacancion'
