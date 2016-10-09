@@ -2,7 +2,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @request.user %>
+  <%= @request.id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @request.user.nombre %> <%= @request.user.apellido_paterno %> <%= @request.user.apellido_materno %>
 </p>
 
 <%= link_to 'Edit', edit_request_path(@request) %> |
