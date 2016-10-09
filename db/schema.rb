@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20161001233312) do
     t.date     "fecha_inicio"
     t.time     "hora_inicio"
     t.string   "descripcion"
+    t.integer  "local_id"
     t.integer  "user_id"
     t.integer  "room_id"
     t.datetime "created_at",   null: false

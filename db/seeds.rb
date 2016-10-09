@@ -1,6 +1,7 @@
 
 # Seeders Productos
  Product.destroy_all
+ ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name = 'products';")
  products = Product.create([
     { nombre: 'Jhonie Walker Red Laber', tipo: 'Bebida',precio: '210.00', disponibilidad: '1' },
     { nombre: 'Jhonie Walker Red Laber', tipo: 'Bebida',precio: '210.00', disponibilidad: '1' },
@@ -27,6 +28,7 @@
 
 # Seeders Productos
 Song.destroy_all
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name = 'songs';")
 songs = Song.create([
 		{ atista: 'Nirvana', nombre: 'Smells Like Teen Spirit'},
 		{ atista: 'Led Zeppelin', nombre: 'Stairway to Heaven'},
@@ -83,35 +85,9 @@ p "Created #{Song.count} Songs"
  ])
  p "Created #{Room.count} Rooms"
 
-#Seeders Reservas
-Reserf.destroy_all
-reserves = Reserf.create([
-	{ fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '1' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '2' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '3' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' },
-  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', user_id: '1', room_id: '5' }
-])
-p "Created #{Reserf.count} Reserves"
-
-
 #Seeders Usuarios
 User.destroy_all
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name = 'users';")
 users = User.create([
 	{ email: 'alancornejo@icloud.com', password: 'cornejo', :password_confirmation => 'cornejo', role: 'admin' },
 	{ email: 'alan_cs85@hotmail.com',  password: 'salazar', :password_confirmation => 'salazar', role: 'cliente' },
@@ -119,3 +95,30 @@ users = User.create([
 
 p "Created #{User.count} Usuarios"
 
+
+#Seeders Reservas
+Reserf.destroy_all
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name = 'reserves';")
+reserves = Reserf.create([
+	{ fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva1', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva2', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva3', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva4', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva5', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva6', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva7', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva8', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva9', local_id: '3', user_id: '1', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva10', local_id: '3', user_id: '2', room_id: '2' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva11', local_id: '3', user_id: '2', room_id: '4' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva12', local_id: '3', user_id: '2', room_id: '4' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva13', local_id: '3', user_id: '2', room_id: '4' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva14', local_id: '3', user_id: '2', room_id: '4' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva15', local_id: '3', user_id: '2', room_id: '4' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva16', local_id: '3', user_id: '2', room_id: '9' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva17', local_id: '3', user_id: '2', room_id: '9' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva18', local_id: '3', user_id: '2', room_id: '9' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva19', local_id: '3', user_id: '2', room_id: '9' },
+  { fecha_inicio: '2014-12-01', hora_inicio: '01:29',descripcion: 'reserva20', local_id: '3', user_id: '2', room_id: '9' }
+ ])
+p "Created #{Reserf.count} Reserves"

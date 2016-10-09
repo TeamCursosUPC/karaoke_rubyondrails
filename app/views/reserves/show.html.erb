@@ -25,5 +25,11 @@
   <%= @reserf.room.nombre %>
 </p>
 
-<%= link_to 'Editar', edit_reserf_path(@reserf) %> |
-<%= link_to 'Regresar', reserves_path %>
+<%= link_to 'Editar', edit_reserf_path(@reserf), :class => 'btn btn-primary' %>
+
+<% if current_user.role == 'admin' %>
+    |
+  <%= link_to 'Regresar', reserves_path, :class => 'btn btn-primary' %>
+<% else %>
+    <%= link_to 'Home', href="/", :class => 'btn btn-default' %>
+<% end %>

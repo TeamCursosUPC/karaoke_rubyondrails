@@ -7,7 +7,7 @@
 #  hora_inicio  :time
 #  descripcion  :string
 #  user_id      :integer
-#  room_id      :integer
+#  local_id      :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
@@ -16,9 +16,10 @@
 class Reserf < ApplicationRecord
   belongs_to :user
   belongs_to :room
+  belongs_to :local
 
-  validates :fecha_inicio , presence: true , confirmation: true
-  validates :hora_inicio , presence: true , confirmation: true
-  validates :room_id , presence: true , confirmation: true
+  validates :fecha_inicio , confirmation: true, presence: { message: " es requerido"}
+  validates :hora_inicio , confirmation: true, presence: { message: " es requerido"}
+  validates :room_id , confirmation: true, presence: { message: " es requerido"}
 
 end
