@@ -16,6 +16,7 @@
 class Room < ApplicationRecord
   belongs_to :local
   has_many :comment
+	has_many :reserves
 
  	#Validaciones de Presencia
 	validates :nombre , presence: true , confirmation: true

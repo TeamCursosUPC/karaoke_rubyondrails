@@ -37,7 +37,7 @@
             <td><%= reserf.hora_inicio.strftime("%H:%M:%S") %></td>
             <td><%= reserf.descripcion %></td>
             <td><%= reserf.user.nombre %> <%= reserf.user.apellido_paterno %> <%= reserf.user.apellido_materno %></td>
-            <td><%= reserf.local.nombre %></td>
+            <td><%= Local.find(reserf.room.local_id).nombre %></td>
             <td><%= reserf.room.nombre %></td>
             <td align="center">
               <%= link_to(edit_reserf_path(reserf)) do %>

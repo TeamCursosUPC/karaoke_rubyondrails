@@ -17,7 +17,7 @@
 class Reserf < ApplicationRecord
   belongs_to :user
   belongs_to :room
-  belongs_to :local
+  #belongs_to :local
 
   validates :fecha_inicio , confirmation: true, presence: { message: " es requerido"}
   validates :hora_inicio , confirmation: true, presence: { message: " es requerido"}

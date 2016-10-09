@@ -1,4 +1,3 @@
-
 # Seeders Locales
 Local.destroy_all
 ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name = 'locals';")
@@ -142,6 +141,19 @@ p "Created #{Song.count} Songs"
  ])
  p "Created #{Room.count} Rooms"
 
+#Seeders Usuarios
+User.destroy_all
+users = User.create([
+	{ email: 'alancornejo@icloud.com', password: 'cornejo', :password_confirmation => 'cornejo', role: 'admin', data_completed:1 },
+  { email: 'alan_cs85@hotmail.com',  password: 'salazar', :password_confirmation => 'salazar', role: 'cliente', data_completed:0 },
+  { nombre:'Martin', apellido_paterno:'Marquina', apellido_materno:'Gutierrez', documento_identidad:'42938809', fecha_nacimiento: '28-04-1985', genero:'Masculino', numero_movil: '900865410', role:'cliente', data_completed:1},
+  { nombre:'Anthony', apellido_paterno:'Andrade', apellido_materno:'Cacres', documento_identidad:'20253490', fecha_nacimiento: '12-12-1984', genero:'Masculino', numero_movil: '980672389', role:'cliente', data_completed:1},
+  { nombre:'Mayron', apellido_paterno:'Camus', apellido_materno:'Sarayasi', documento_identidad:'00760013', fecha_nacimiento: '10-09-1989', genero:'Masculino', numero_movil: '970321456', role:'cliente', data_completed:1},
+  { nombre:'Alfredo', apellido_paterno:'Arce', apellido_materno:'Mendiola', documento_identidad:'02841909', fecha_nacimiento: '28-07-1990', genero:'Masculino', numero_movil: '980123568', role:'cliente', data_completed:1},
+  { nombre:'Alan', apellido_paterno:'Corenjo', apellido_materno:'Cruz', documento_identidad:'41922003', fecha_nacimiento: '30-10-1983', genero:'Masculino', numero_movil: '980345678', role:'cliente', data_completed:1},
+  { nombre:'Karina', apellido_paterno:'Caso', apellido_materno:'Ramos', documento_identidad:'46800069', fecha_nacimiento: '13-02-1991', genero:'Femenino', numero_movil: '949494568', role:'cliente', data_completed:1}
+])
+p "Created #{User.count} Usuarios"
 
 #Seeders Reservas
 Reserf.destroy_all
@@ -170,18 +182,3 @@ reserves = Reserf.create([
  ])
 p "Created #{Reserf.count} Reserves"
 
-
-#Seeders Usuarios
-User.destroy_all
-users = User.create([
-	{ email: 'alancornejo@icloud.com', password: 'cornejo', :password_confirmation => 'cornejo', role: 'admin', data_completed:1 },
-	{ email: 'alan_cs85@hotmail.com',  password: 'salazar', :password_confirmation => 'salazar', role: 'cliente', data_completed:0 },
-	{ nombre:'Martin', apellido_paterno:'Marquina', apellido_materno:'Gutierrez', documento_identidad:'42938809', fecha_nacimiento: '28-04-1985', genero:'Masculino', numero_movil: '900865410', role:'cliente', data_completed:1},
-	{ nombre:'Anthony', apellido_paterno:'Andrade', apellido_materno:'Cacres', documento_identidad:'20253490', fecha_nacimiento: '12-12-1984', genero:'Masculino', numero_movil: '980672389', role:'cliente', data_completed:1},
-	{ nombre:'Mayron', apellido_paterno:'Camus', apellido_materno:'Sarayasi', documento_identidad:'00760013', fecha_nacimiento: '10-09-1989', genero:'Masculino', numero_movil: '970321456', role:'cliente', data_completed:1},
-	{ nombre:'Alfredo', apellido_paterno:'Arce', apellido_materno:'Mendiola', documento_identidad:'02841909', fecha_nacimiento: '28-07-1990', genero:'Masculino', numero_movil: '980123568', role:'cliente', data_completed:1},
-	{ nombre:'Alan', apellido_paterno:'Corenjo', apellido_materno:'Cruz', documento_identidad:'41922003', fecha_nacimiento: '30-10-1983', genero:'Masculino', numero_movil: '980345678', role:'cliente', data_completed:1},
-	{ nombre:'Karina', apellido_paterno:'Caso', apellido_materno:'Ramos', documento_identidad:'46800069', fecha_nacimiento: '13-02-1991', genero:'Femenino', numero_movil: '949494568', role:'cliente', data_completed:1}
-])
-
-p "Created #{User.count} Usuarios"
